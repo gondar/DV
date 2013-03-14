@@ -1,3 +1,16 @@
+function addEdges(sigInst) {
+    var i =0;
+    sigInst.iterNodes(function (node1) {
+        sigInst.iterNodes(function (node2) {
+            if (node1.attr.reservation.partnerid == node2.attr.reservation.partnerid) {
+                sigInst.addEdge(i++, node1.id, node2.id);
+            }
+            if (node1.attr.reservation.partysize == node2.attr.reservation.partysize) {
+                sigInst.addEdge(i++, node1.id, node2.id,8);
+            }
+        });
+    });
+}
 $(document).ready(function(){
     var sigRoot = document.getElementById('graph');
     var sigInst = sigma.init(sigRoot);
@@ -14,18 +27,29 @@ $(document).ready(function(){
             reservation: reservation
         }).draw();
     }
-    var i =0;
-    sigInst.iterNodes(function(node1){
-        sigInst.iterNodes(function(node2) {
-            if (node1.attr.reservation == undefined)
-                return;
-            if (node1.attr.reservation.partnerid == node2.attr.reservation.partnerid) {
-                sigInst.addEdge(i++,node1.id,node2.id);
-            }
-        });
-    });
-    sigInst.startForceAtlas2();
+    addEdges(sigInst);
+    new ForceAtlasRunner(sigInst,"#start_stop").Run();
 })
+
+function ForceAtlasRunner(sigInst, selector){
+    var isRunning = false;
+
+    $(selector).click(function(){
+        if (isRunning) {
+            sigInst.stopForceAtlas2();
+            isRunning = false;
+            return;
+        }
+        sigInst.startForceAtlas2();
+        isRunning = true;
+    })
+    return {
+        Run: function(){
+            sigInst.startForceAtlas2();
+            isRunning = true;
+        }
+    }
+}
 
 function partnerIdToColor(partnerId){
     if (partnerId == 1)
