@@ -1,4 +1,4 @@
-function SigmaAdapter() {
+function SigmaAdapter(classifierManager) {
     var sigInst;
     function addEdges(selected) {
         sigInst.iterEdges(function (edge) {
@@ -11,7 +11,9 @@ function SigmaAdapter() {
                     if (selected.hasOwnProperty(prop)) {
                         var weight = selected[prop];
                         if (weight != 0) {
-                            if (node1.attr.reservation[prop] == node2.attr.reservation[prop]){
+                            //if (node1.attr.reservation[prop] == node2.attr.reservation[prop]){
+                            var classifier = classifierManager.GetClassifier(prop);
+                            if (classifier.Compare(node1.attr.reservation[prop], node2.attr.reservation[prop]) == 1){
                                 sigInst.addEdge(i++, node1.id, node2.id, weight);
                             }
                         }
