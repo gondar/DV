@@ -1,5 +1,6 @@
-function PopUpManager(sigInst, selector){
+function PopUpManager(graph, selector){
     var popUp;
+    var sigInst = graph.Sigma;
 
     function attributesToString(attr) {
         var res ="";

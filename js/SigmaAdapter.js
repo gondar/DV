@@ -1,5 +1,5 @@
 function SigmaAdapter() {
-    var sigInst = null;
+    var sigInst;
     function addEdges(selected) {
         sigInst.iterEdges(function (edge) {
             sigInst.dropEdge(edge.id);
@@ -21,13 +21,11 @@ function SigmaAdapter() {
         });
         sigInst.draw();
     }
-    function initSigma() {
-        var sigRoot = document.getElementById('graph');
-        sigInst = sigma.init(sigRoot);
-        new PopUpManager(sigInst, '#graph').AddPopUp();
-        var data = DataSource().GetData();
-        for (var reservationId in data.reservations) {
-            var reservation = data.reservations[reservationId];
+
+    function addNodes(data) {
+        var reservations = data.reservations;
+        for (var reservationId in reservations) {
+            var reservation = reservations[reservationId];
             sigInst.addNode(reservation.resid, {
                 color: "#ffffff",
                 size: 1,
@@ -37,7 +35,12 @@ function SigmaAdapter() {
                 label: ""
             }).draw();
         }
-        new ForceAtlasRunner(sigInst, "#start_stop").Run();
+    }
+
+    function initSigma(data, selector) {
+        var sigRoot = $(selector).get(0);
+        sigInst = sigma.init(sigRoot);
+        addNodes(data);
         return sigInst;
     }
 
@@ -77,8 +80,8 @@ function SigmaAdapter() {
     }
 
     return {
-        Init: function(){
-            initSigma();
+        Init: function(data,selector){
+            this.Sigma = initSigma(data, selector);
             return this;
         },
         AddEdges: addEdges,

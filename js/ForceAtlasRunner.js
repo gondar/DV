@@ -1,5 +1,6 @@
-function ForceAtlasRunner(sigInst, selector){
+function ForceAtlasRunner(sigmaAdapter, selector){
     var isRunning = false;
+    sigInst = sigmaAdapter.Sigma;
 
     $(selector).click(function(){
         if (isRunning) {

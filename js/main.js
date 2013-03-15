@@ -1,7 +1,8 @@
 $(document).ready(function(){
     var data = new DataSource().GetData();
-    var graph = new SigmaAdapter().Init();
-    var settingsView = new SettingsView();
-    settingsView.PopulateSettings(data).AddListeners(graph);
+    var sigmaAdapter = new SigmaAdapter().Init(data, "#graph");
+    new SettingsView().PopulateSettings(data).AddListeners(sigmaAdapter);
+    new ForceAtlasRunner(sigmaAdapter, "#start_stop").Run();
+    new PopUpManager(sigmaAdapter, '#graph').AddPopUp();
 })
 
