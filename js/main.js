@@ -23,22 +23,36 @@ function InitColorSettings(graph) {
     graph.BindPropertToColor(property);
 }
 
-$(document).ready(function(){
-    var data = new DataSource().GetData();
-    var graph = new SigmaAdapter().Init();
+function AddEdgesSelection(data) {
     var reservation = data.reservations[0];
-    for (var k in reservation)
-    {
-        if (reservation.hasOwnProperty(k))
-        {
+    for (var k in reservation) {
+        if (reservation.hasOwnProperty(k)) {
             var data = k;
             var name = k;
-            var html = "<button class=\"btn btn-large edge-setting\" type=\"button\" data-property=\""+data+"\">"+name+"</button>";
+            var html = "<button class=\"btn btn-large edge-setting\" type=\"button\" data-property=\"" + data + "\">" + name + "</button>";
             $(".edge-settings").append(html);
         }
     }
+}
 
+function AddBindToColor(data) {
+    var reservation = data.reservations[0];
+    for (var k in reservation) {
+        if (reservation.hasOwnProperty(k)) {
+            var data = k;
+            var name = k;
+            //var html = "<button class=\"btn btn-large edge-setting\" type=\"button\" data-property=\"" + data + "\">" + name + "</button>";
+            var html = "<li><a href='#' class='color-setting' data-property='"+data+"' tabindex='-1'>"+name+"</a></li>";
+            $(".color-settings").append(html);
+        }
+    }
+}
+$(document).ready(function(){
+    var data = new DataSource().GetData();
+    var graph = new SigmaAdapter().Init();
+    AddEdgesSelection(data);
     InitEdgeSettings(graph);
+    AddBindToColor(data);
     InitColorSettings(graph);
 })
 

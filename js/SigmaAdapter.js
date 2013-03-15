@@ -57,7 +57,7 @@ function SigmaAdapter() {
 
     function IntToColor(id){
         var colorId = id % Colors.length;
-        return Colors[colorId].Rgb;
+        return "#"+Colors[colorId];
     }
 
     return {
@@ -70,14 +70,4 @@ function SigmaAdapter() {
     }
 }
 
-var Colors = [
-        GetColor(0,"Blue","#006DCC"),
-        GetColor(1,"Red","#DA4F49"),
-        GetColor(2,"Yellow","#FAA732"),
-        GetColor(3,"Green","#5BB75B"),
-        GetColor(4,"Magneta","#8B008B")
-    ];
-
-function GetColor(id, name, rgb){
-    return {Id: id, Name: name, Rgb: rgb};
-}
+var Colors = ["006DCC","DA4F49","FAA732","5BB75B","8B008B","4848DA","6A48DA","4891DA","48DAD7","48DAAB","48DA54","BADA48","DAB848","DA7448"];
