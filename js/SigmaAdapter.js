@@ -30,14 +30,30 @@ function SigmaAdapter() {
             var reservation = data.reservations[reservationId];
             sigInst.addNode(reservation.resid, {
                 color: "#ffffff",
-                size: reservation.partysize,
+                size: 1,
                 x: Math.random(),
                 y: Math.random(),
-                reservation: reservation
+                reservation: reservation,
+                label: ""
             }).draw();
         }
         new ForceAtlasRunner(sigInst, "#start_stop").Run();
         return sigInst;
+    }
+
+    function bindPropertyToSize(property){
+        var sizes = {};
+        var currentSize = 1;
+
+        sigInst.iterNodes(function (node) {
+            var propertyValue = node.attr.reservation[property];
+            if (!sizes.hasOwnProperty(propertyValue)){
+                sizes[propertyValue] = currentSize;
+                currentSize += 1;
+            }
+            node.size = sizes[propertyValue];
+        });
+        sigInst.draw();
     }
 
     function bindPropertyToColor(property){
@@ -66,7 +82,8 @@ function SigmaAdapter() {
             return this;
         },
         AddEdges: addEdges,
-        BindPropertToColor: bindPropertyToColor
+        BindPropertToColor: bindPropertyToColor,
+        BindPropertToSize: bindPropertyToSize
     }
 }
 
