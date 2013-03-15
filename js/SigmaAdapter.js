@@ -29,7 +29,7 @@ function SigmaAdapter() {
         for (var reservationId in data.reservations) {
             var reservation = data.reservations[reservationId];
             sigInst.addNode(reservation.resid, {
-                color: partnerIdToColor(reservation.partnerid),
+                color: "#ffffff",
                 size: reservation.partysize,
                 x: Math.random(),
                 y: Math.random(),
@@ -40,17 +40,24 @@ function SigmaAdapter() {
         return sigInst;
     }
 
+    function bindPropertyToColor(property){
+        var colors = {};
+        var colorsCount = 0;
 
-    function partnerIdToColor(partnerId){
-        if (partnerId == 1)
-            return "#ff0000";
-        if (partnerId == 84)
-            return "#00ff00";
-        if (partnerId == 183)
-            return "#0000ff";
-        if (partnerId == 291)
-            return "#ff00ff";
-        return "#ffffff"
+        sigInst.iterNodes(function (node) {
+            var propertyValue = node.attr.reservation[property];
+            if (!colors.hasOwnProperty(propertyValue)){
+                colors[propertyValue] = IntToColor(colorsCount);
+                colorsCount++;
+            }
+            node.color = colors[propertyValue];
+        });
+        sigInst.draw();
+    }
+
+    function IntToColor(id){
+        var colorId = id % Colors.length;
+        return Colors[colorId].Rgb;
     }
 
     return {
@@ -58,8 +65,19 @@ function SigmaAdapter() {
             initSigma();
             return this;
         },
-        AddEdges: function(edges) {
-            addEdges(edges);
-        }
+        AddEdges: addEdges,
+        BindPropertToColor: bindPropertyToColor
     }
+}
+
+var Colors = [
+        GetColor(0,"Blue","#006DCC"),
+        GetColor(1,"Red","#DA4F49"),
+        GetColor(2,"Yellow","#FAA732"),
+        GetColor(3,"Green","#5BB75B"),
+        GetColor(4,"Magneta","#8B008B")
+    ];
+
+function GetColor(id, name, rgb){
+    return {Id: id, Name: name, Rgb: rgb};
 }

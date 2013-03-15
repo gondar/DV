@@ -33,7 +33,7 @@
 .sigma-parent {
     background: none repeat scroll 0 0 #222222;
     border-radius: 4px 4px 4px 4px;
-    height: 500px;
+    height: 300px;
     position: relative;
 }
  body {
@@ -44,12 +44,24 @@
     margin: 30px 0;
 }
 
+.btn {
+    width: 100%;
+}
+
 .edge-settings {
     width: 100%;
 }
 
-.edge-setting{
+.color-settings {
     width: 100%;
+}
+
+.edge-setting{
+    text-transform: capitalize;
+}
+
+.color-setting{
+    text-transform: capitalize;
 }
 
 /* ==========================================================================
