@@ -6,13 +6,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <title>Force Atlas2 Reservations</title>
+        <meta name="description" content="Reservations data by Force Atlas2">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/normalize.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -22,27 +21,57 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <h3>Data Visualization</h3>
-        <div class="menu"><input type="button" value="Stop" id="start_stop"/></div>
-        <div class="sigma-parent">
-        <div id="graph" class="sigma-expand"></div>"
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="#">ForceAtlas2 Data Visualization</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Graph</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h1>Data Visualization</h1>
+            <p>Play around with settings under graph to answer the most pressing questions.</p>
+            <div class="row-fluid settings">
+                    <div class="span6">            <div class="sigma-parent">
+                        <div id="graph" class="sigma-expand"></div>
+                    </div></div>
+                    <div class="span3">
+                        <div class="well" style="width: 100%">
+                            <input class="btn btn-large btn-block btn-danger" type="button" value="Stop" id="start_stop"/>
+                            <h2 class="text-center">Select Edges</h2>
+                            <div class="btn-group btn-group-vertical edge-settings">
+                                <button class="btn btn-large edge-setting" type="button" data-property="partnerid">PartnerId</button>
+                                <button class="btn btn-large edge-setting" type="button" data-property="partysize">PartySize</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
         <script src="js/sigma.min.js"></script>
         <script src="js/sigma.forceatlas2.js"></script>
         <script src="js/DataSource.js"></script>
         <script src="js/PopUpManager.js"></script>
+        <script src="js/ForceAtlasRunner.js"></script>
         <script src="js/plugins.js"></script>
+        <script src="js/SigmaAdapter.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
     </body>
 </html>
