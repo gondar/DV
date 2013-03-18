@@ -4,7 +4,7 @@
     <list default="true" id="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" name="Default" comment="" />
     <ignored path="DV.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363371296059" ignored="false" />
+    <file path="/main.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363608220214" ignored="false" />
     <file path="/index.html" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363367283412" ignored="false" />
     <file path="/DataSource.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363286388592" ignored="false" />
     <file path="/PopUp.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363290306308" ignored="false" />
@@ -12,7 +12,7 @@
     <file path="/fragment.js2" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363370177495" ignored="false" />
     <file path="/main.css" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363365108041" ignored="false" />
     <file path="/ForceAtlasRunner.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363369891490" ignored="false" />
-    <file path="/SigmaAdapter.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363370950688" ignored="false" />
+    <file path="/SigmaAdapter.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363608269365" ignored="false" />
     <file path="/SettingsView.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363368053165" ignored="false" />
     <file path="/PopUpManager.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363369149624" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="74" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.8278596">
+            <state line="75" column="43" selection-start="1919" selection-end="1919" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -64,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SigmaAdapter.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SigmaAdapter.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="115" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
+            <state line="63" column="48" selection-start="2182" selection-end="2182" vertical-scroll-proportion="0.53793883">
               <folding />
             </state>
           </provider>
@@ -117,8 +117,8 @@
         <option value="$PROJECT_DIR$/js/PopUpManager.js" />
         <option value="$PROJECT_DIR$/js/ForceAtlasRunner.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/SigmaAdapter.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/SigmaAdapter.js" />
       </list>
     </option>
   </component>
@@ -373,13 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/PopUpManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="30" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="67" column="61" selection-start="3497" selection-end="3497" vertical-scroll-proportion="-2.3846154">
@@ -397,9 +390,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
+    <entry file="file://$PROJECT_DIR$/js/PopUpManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="115" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0">
+        <state line="2" column="30" selection-start="85" selection-end="85" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -413,7 +406,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="74" selection-start="1127" selection-end="1127" vertical-scroll-proportion="0.8278596">
+        <state line="75" column="43" selection-start="1919" selection-end="1919" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="48" selection-start="2182" selection-end="2182" vertical-scroll-proportion="0.53793883">
           <folding />
         </state>
       </provider>

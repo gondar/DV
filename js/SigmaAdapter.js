@@ -11,10 +11,10 @@ function SigmaAdapter(classifierManager) {
                     if (selected.hasOwnProperty(prop)) {
                         var weight = selected[prop];
                         if (weight != 0) {
-                            //if (node1.attr.reservation[prop] == node2.attr.reservation[prop]){
                             var classifier = classifierManager.GetClassifier(prop);
-                            if (classifier.Compare(node1.attr.reservation[prop], node2.attr.reservation[prop]) == 1){
-                                sigInst.addEdge(i++, node1.id, node2.id, weight);
+                            var relation = classifier.Compare(node1.attr.reservation[prop], node2.attr.reservation[prop]);
+                            if (relation != 0) {
+                                sigInst.addEdge(i++, node1.id, node2.id, relation*weight);
                             }
                         }
                     }
@@ -49,9 +49,10 @@ function SigmaAdapter(classifierManager) {
     function bindPropertyToSize(property){
         var sizes = {};
         var currentSize = 1;
+        var classifier = classifierManager.GetClassifier(property);
 
         sigInst.iterNodes(function (node) {
-            var propertyValue = node.attr.reservation[property];
+            var propertyValue = classifier.GetKey(node.attr.reservation[property]);
             if (!sizes.hasOwnProperty(propertyValue)){
                 sizes[propertyValue] = currentSize;
                 currentSize += 1;
@@ -64,9 +65,10 @@ function SigmaAdapter(classifierManager) {
     function bindPropertyToColor(property){
         var colors = {};
         var colorsCount = 0;
+        var classifier = classifierManager.GetClassifier(property);
 
         sigInst.iterNodes(function (node) {
-            var propertyValue = node.attr.reservation[property];
+            var propertyValue = classifier.GetKey(node.attr.reservation[property]);
             if (!colors.hasOwnProperty(propertyValue)){
                 colors[propertyValue] = IntToColor(colorsCount);
                 colorsCount++;
