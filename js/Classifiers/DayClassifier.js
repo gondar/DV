@@ -11,12 +11,12 @@ function DayClassifier() {
             var date1 = parseDate(val1)
             var date2 = parseDate(val2);
 
-            if (date1.getDay() == date2.getDay())
+            if (date1.getDate() == date2.getDate())
                 return 1;
             return 0;
         },
         GetKey: function(val) {
-            return parseDate(val).getDay();
+            return parseDate(val).getDate();
         }
     }
 }

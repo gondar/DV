@@ -50,8 +50,18 @@ function SigmaAdapter(classifierManager, dataManager) {
                 y: Math.random(),
                 reservation: reservation,
                 label: ""
-            }).draw();
+            });
         }
+        sigInst.draw();
+    }
+
+    function updateNodes() {
+//        sigInst.iterNodes(function(node){
+//            sigInst.dropNode(node.id);
+//        });
+        sigInst.emptyGraph();
+        nodesCounter=0;
+        addNodes(dataManager.GetData());
     }
 
     function initSigma(data, selector) {
@@ -101,6 +111,7 @@ function SigmaAdapter(classifierManager, dataManager) {
             return this;
         },
         AddNodes: addNodes,
+        UpdateNodes: updateNodes,
         AddEdges: addEdges,
         BindPropertToColor: bindPropertyToColor,
         RedrawAll: reDrawAll

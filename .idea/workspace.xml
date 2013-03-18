@@ -4,17 +4,18 @@
     <list default="true" id="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" name="Default" comment="" />
     <ignored path="DV.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363628748142" ignored="false" />
-    <file path="/index.html" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363627335087" ignored="false" />
+    <file path="/main.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363648981109" ignored="false" />
+    <file path="/index.html" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363641866671" ignored="false" />
     <file path="/DataSource.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363621983135" ignored="false" />
     <file path="/PopUp.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363290306308" ignored="false" />
     <file path="/*.regexp" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363290598951" ignored="false" />
-    <file path="/fragment.js2" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363619810705" ignored="false" />
+    <file path="/fragment.js2" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363648913703" ignored="false" />
     <file path="/main.css" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363365108041" ignored="false" />
-    <file path="/ForceAtlasRunner.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363369891490" ignored="false" />
-    <file path="/SigmaAdapter.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363628194589" ignored="false" />
+    <file path="/ForceAtlasRunner.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363649069843" ignored="false" />
+    <file path="/SigmaAdapter.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363648114578" ignored="false" />
     <file path="/SettingsView.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363368053165" ignored="false" />
     <file path="/PopUpManager.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363625914999" ignored="false" />
+    <file path="/DayClassifier.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363642879625" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,36 +38,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="245" selection-start="2567" selection-end="2567" vertical-scroll-proportion="-12.192307">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="25" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSource.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/DataSource.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="9" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PopUpManager.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/PopUpManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="87" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0">
+            <state line="79" column="51" selection-start="4544" selection-end="4554" vertical-scroll-proportion="-1.3076923">
               <folding />
             </state>
           </provider>
@@ -75,16 +47,16 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="26" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.57757646">
+            <state line="81" column="32" selection-start="3167" selection-end="3167" vertical-scroll-proportion="0.77474403">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingsView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
+      <file leaf-file-name="ForceAtlasRunner.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ForceAtlasRunner.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -93,7 +65,16 @@
       <file leaf-file-name="DayClassifier.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Classifiers/DayClassifier.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="87" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+            <state line="18" column="42" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="12" selection-start="692" selection-end="733" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,16 +92,7 @@
       <file leaf-file-name="SigmaAdapter.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="28" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ForceAtlasRunner.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ForceAtlasRunner.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="18" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
+            <state line="121" column="141" selection-start="3798" selection-end="3798" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -137,7 +109,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/js/PopUp.js" />
-        <option value="$PROJECT_DIR$/js/ForceAtlasRunner.js" />
         <option value="$PROJECT_DIR$/js/Classifiers/ClassifiersManager.js" />
         <option value="$PROJECT_DIR$/js/Classifiers/EqualClassifier.js" />
         <option value="$PROJECT_DIR$/js/Classifiers/ApproximateClassifier.js" />
@@ -149,14 +120,15 @@
         <option value="$PROJECT_DIR$/js/Classifiers/DayClassifier.js" />
         <option value="$PROJECT_DIR$/js/SigmaAdapter.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/ForceAtlasRunner.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1066" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1288" />
+    <option name="height" value="778" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -184,6 +156,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,7 +223,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -272,7 +244,7 @@
     </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -306,25 +278,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1696" height="1066" extended-state="6" />
+    <frame x="-4" y="-4" width="1288" height="778" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2063971" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20604613" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -390,6 +362,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/ForceAtlasRunner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="18" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/favicon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -402,9 +381,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/plugins.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Classifiers/ClassifiersManager.js">
@@ -424,20 +401,6 @@
     <entry file="file://$PROJECT_DIR$/js/Classifiers/ApproximateClassifier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="1" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ForceAtlasRunner.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="18" selection-start="426" selection-end="426" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1596" selection-end="1596" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -465,30 +428,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="245" selection-start="2567" selection-end="2567" vertical-scroll-proportion="-12.192307">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="79" column="51" selection-start="4544" selection-end="4554" vertical-scroll-proportion="-1.3076923">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Classifiers/DayClassifier.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="87" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+        <state line="18" column="42" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="12" selection-start="692" selection-end="733" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="28" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.0">
+        <state line="121" column="141" selection-start="3798" selection-end="3798" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ForceAtlasRunner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="26" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.57757646">
+        <state line="81" column="32" selection-start="3167" selection-end="3167" vertical-scroll-proportion="0.77474403">
           <folding />
         </state>
       </provider>
