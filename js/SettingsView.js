@@ -24,16 +24,6 @@ function SettingsView(){
         });
     }
 
-    function InitSizeSettings(graph) {
-        var property = "partysize";
-        graph.BindPropertToSize(property);
-        $(".size-setting").click(function () {
-            property = $(this).attr("data-property");
-            $(this).parent().parent().parent().children("a").html(property+" <span class='caret'></span>");
-            graph.BindPropertToSize(property);
-        });
-    }
-
     function AddEdgesSelection(reservation) {
         var template = Handlebars.compile($("#edge-setting-template").html());
         for (var k in reservation) {
@@ -48,25 +38,16 @@ function SettingsView(){
         }
     }
 
-    function AddBindToSize(reservation) {
-        var template = Handlebars.compile($("#size-setting-template").html());
-        for (var k in reservation) {
-            $(".size-settings").append(template({data:k, name:k}));
-        }
-    }
-
     return {
         PopulateSettings: function(data){
             var reservation = data.reservations[0];
             AddEdgesSelection(reservation);
             AddBindToColor(reservation);
-            AddBindToSize(reservation);
             return this;
         },
         AddListeners: function(graph){
             InitEdgeSettings(graph);
             InitColorSettings(graph);
-            InitSizeSettings(graph);
             return this;
         }
     }

@@ -34,7 +34,8 @@ function PopUpManager(graph, selector){
                 'box-shadow': '0 0 4px #666',
                 'position': 'absolute',
                 'left': node.displayX,
-                'top': node.displayY+15
+                'top': node.displayY+15,
+                'z-index': 10
             });
 
         $('ul',popUp).css('margin','0 0 0 20px');

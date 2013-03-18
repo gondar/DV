@@ -1,6 +1,13 @@
 function SigmaAdapter(classifierManager) {
     var sigInst;
+    var nodesCounter = 0;
+    var lastSelectedEdges = {};
+    var lastColorsProperty = "partnerid";
+
     function addEdges(selected) {
+        if (selected == undefined)
+            selected = lastSelectedEdges;
+        lastSelectedEdges = selected;
         sigInst.iterEdges(function (edge) {
             sigInst.dropEdge(edge.id);
         });
@@ -21,14 +28,22 @@ function SigmaAdapter(classifierManager) {
                 }
             });
         });
+        setSize();
         sigInst.draw();
+    }
+
+    function reDrawAll(){
+        sigInst.iterNodes(function(node){
+            node.x = Math.random();
+            node.y = Math.random();
+        });
     }
 
     function addNodes(data) {
         var reservations = data.reservations;
         for (var reservationId in reservations) {
             var reservation = reservations[reservationId];
-            sigInst.addNode(reservation.resid, {
+            sigInst.addNode(nodesCounter++, {
                 color: "#ffffff",
                 size: 1,
                 x: Math.random(),
@@ -46,23 +61,20 @@ function SigmaAdapter(classifierManager) {
         return sigInst;
     }
 
-    function bindPropertyToSize(property){
-        var sizes = {};
-        var currentSize = 1;
-        var classifier = classifierManager.GetClassifier(property);
-
-        sigInst.iterNodes(function (node) {
-            var propertyValue = classifier.GetKey(node.attr.reservation[property]);
-            if (!sizes.hasOwnProperty(propertyValue)){
-                sizes[propertyValue] = currentSize;
-                currentSize += 1;
-            }
-            node.size = sizes[propertyValue];
+    function setSize(){
+        var max = 4;
+        sigInst.iterNodes(function(node) {
+            node.size = node.inDegree/2+1;
+            if (node.size > max)
+                node.size = max;
         });
         sigInst.draw();
     }
 
     function bindPropertyToColor(property){
+        if (property == undefined)
+            property = lastColorsProperty;
+        lastColorsProperty = property
         var colors = {};
         var colorsCount = 0;
         var classifier = classifierManager.GetClassifier(property);
@@ -88,9 +100,11 @@ function SigmaAdapter(classifierManager) {
             this.Sigma = initSigma(data, selector);
             return this;
         },
+        AddNodes: addNodes,
         AddEdges: addEdges,
         BindPropertToColor: bindPropertyToColor,
-        BindPropertToSize: bindPropertyToSize
+        RedrawAll: reDrawAll
+
     }
 }
 
