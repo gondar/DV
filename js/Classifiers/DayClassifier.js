@@ -3,7 +3,7 @@ function DayClassifier() {
         var parts = dateString.split("T");
         var dateParts = parts[0].split("-");
         var timeParts = parts[1].split(":");
-        return new Date(dateParts[0],dateParts[1],dateParts[2],timeParts[0],timeParts[2],0);
+        return new Date(dateParts[0],dateParts[1],dateParts[2],timeParts[0],timeParts[1],0);
     }
     return {
         Compare: function(val1, val2) {
