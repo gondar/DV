@@ -1,4 +1,4 @@
-function SigmaAdapter(classifierManager) {
+function SigmaAdapter(classifierManager, dataManager) {
     var sigInst;
     var nodesCounter = 0;
     var lastSelectedEdges = {};
@@ -40,7 +40,7 @@ function SigmaAdapter(classifierManager) {
     }
 
     function addNodes(data) {
-        var reservations = data.reservations;
+        var reservations = data;//.reservations;
         for (var reservationId in reservations) {
             var reservation = reservations[reservationId];
             sigInst.addNode(nodesCounter++, {
@@ -57,7 +57,7 @@ function SigmaAdapter(classifierManager) {
     function initSigma(data, selector) {
         var sigRoot = $(selector).get(0);
         sigInst = sigma.init(sigRoot);
-        addNodes(data);
+        addNodes(dataManager.GetData());
         return sigInst;
     }
 

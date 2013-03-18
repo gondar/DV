@@ -15,9 +15,10 @@ function DataManager(){
                 var reservation = reservations[reservationId];
                 nodes.push(reservation);
             }
+            return this;
         },
-        GetFilteredData: function(data) {
-            return nodes;
+        GetData: function(data) {
+            return nodes.slice(0,500);
         },
         AddFilter: function(filter){
 
@@ -27,10 +28,11 @@ function DataManager(){
 
 $(document).ready(function(){
     var dataSource = new DataSource();
-    dataSource.GetData(0,500,function(data) {
+    dataSource.GetData(0,15000,function(data) {
         var classifierManager = new ClassifiersManager(new EqualClassifier());
         setClassifiers(classifierManager);
-        var sigmaAdapter = new SigmaAdapter(classifierManager).Init(data, "#graph");
+        var dataManager = new DataManager().AddData(data);
+        var sigmaAdapter = new SigmaAdapter(classifierManager, dataManager).Init(data, "#graph");
         new SettingsView().PopulateSettings(data).AddListeners(sigmaAdapter);
         new ForceAtlasRunner(sigmaAdapter, "#start_stop").Run();
         new PopUpManager(sigmaAdapter, '#graph').AddPopUp();
