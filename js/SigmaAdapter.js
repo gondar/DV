@@ -56,13 +56,11 @@ function SigmaAdapter(classifierManager, dataManager) {
     }
 
     function updateNodes() {
-//        sigInst.iterNodes(function(node){
-//            sigInst.dropNode(node.id);
-//        });
         sigInst.emptyGraph();
         nodesCounter=0;
         addNodes(dataManager.GetData());
-    }
+        addEdges();
+        }
 
     function initSigma(data, selector) {
         var sigRoot = $(selector).get(0);

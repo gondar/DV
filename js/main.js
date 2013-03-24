@@ -27,7 +27,7 @@ function DataManager(classifierManager){
                     }
                 }
                 return true;
-            }).slice(0,500);
+            }).slice(0,100);
         },
         GetAllData: function(data) {
             return nodes;
@@ -80,9 +80,11 @@ $(document).ready(function(){
         BuildGroupByDaySettings(dataManager);
         $('.group-datetime').click(function(){
              forceRunner.Stop();
-//            var groupId = $(this).attr("data-group-id");
-//            dataManager.AddFilter("DateTime",groupId);
+            var groupId = $(this).attr("data-group-id");
+            dataManager.AddFilter("DateTime",groupId);
             sigmaAdapter.UpdateNodes();
+            setTimeout(function(){forceRunner.Run()},1000);
+            //forceRunner.Run();
         });
     });
 })

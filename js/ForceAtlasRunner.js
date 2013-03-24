@@ -3,19 +3,23 @@ function ForceAtlasRunner(sigmaAdapter, selector){
     sigInst = sigmaAdapter.Sigma;
 
     function startForceAtlas() {
+        if (isRunning)
+            return;
         sigInst.startForceAtlas2();
         isRunning = true;
-        $(this).attr("value", "Stop");
-        $(this).removeClass("btn-success");
-        $(this).addClass("btn-danger");
+        $(selector).attr("value", "Stop");
+        $(selector).removeClass("btn-success");
+        $(selector).addClass("btn-danger");
     }
 
     function stopForceAtlas() {
+        if (!isRunning)
+            return;
         sigInst.stopForceAtlas2();
         isRunning = false;
-        $(this).attr("value", "Start");
-        $(this).removeClass("btn-danger");
-        $(this).addClass("btn-success");
+        $(selector).attr("value", "Start");
+        $(selector).removeClass("btn-danger");
+        $(selector).addClass("btn-success");
     }
 
     $(selector).click(function(){
@@ -30,6 +34,6 @@ function ForceAtlasRunner(sigmaAdapter, selector){
             startForceAtlas();
             return this;
         },
-        Stop: stopForceAtlas()
+        Stop: stopForceAtlas
     }
 }
