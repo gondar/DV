@@ -27,7 +27,7 @@ function DataManager(classifierManager){
                     }
                 }
                 return true;
-            }).slice(0,100);
+            }).slice(0,500);
         },
         GetAllData: function(data) {
             return nodes;
