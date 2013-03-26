@@ -1,0 +1,134 @@
+﻿{
+"title": "Reservation Feed",
+"href_self": "http://feeds-eu.otcorp.opentable.com/reservations/created/188566819.json",
+"href_prev": "http://localhost:4567/reservations/188566810.json",
+"max_resid": 188566819,
+"max_datemadeutc": "2013-03-26T18:49:38",
+"reservations": [
+{
+"resid": 188566811,
+"datemadeutc": "2013-03-26T18:48:55",
+"shiftdatetime": "2013-03-29T17:00:00",
+"partysize":12,
+"billingtype": "restref",
+"rid": 79282,
+"restaurantname": "The Old Dairy",
+"latitude": 51.570683,
+"longitude": -0.115636,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566812,
+"datemadeutc": "2013-03-26T18:48:57",
+"shiftdatetime": "2013-03-27T20:00:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 13539,
+"restaurantname": "Schneeweiß",
+"latitude": 52.50869,
+"longitude": 13.45813,
+"partnerid":1522,
+"partnername": "DE Mobile Web"
+}
+,
+{
+"resid": 188566813,
+"datemadeutc": "2013-03-26T18:49:04",
+"shiftdatetime": "2013-04-01T14:00:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 4275,
+"restaurantname": "Clos Maggiore",
+"latitude": 51.511694,
+"longitude": -0.124795,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566814,
+"datemadeutc": "2013-03-26T18:49:04",
+"shiftdatetime": "2013-03-26T19:30:00",
+"partysize":4,
+"billingtype": "standard",
+"rid": 80344,
+"restaurantname": "Paternoster Chop House",
+"latitude": 51.514501,
+"longitude": -0.098622,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566815,
+"datemadeutc": "2013-03-26T18:49:14",
+"shiftdatetime": "2013-04-05T19:45:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 15051,
+"restaurantname": "HOHOFFS 800°",
+"latitude": 51.54646,
+"longitude": 7.42905,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566816,
+"datemadeutc": "2013-03-26T18:49:14",
+"shiftdatetime": "2013-03-28T12:30:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 12604,
+"restaurantname": "Auberge Du Lac",
+"latitude": 51.80144,
+"longitude": -0.24628,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566817,
+"datemadeutc": "2013-03-26T18:49:17",
+"shiftdatetime": "2013-04-26T18:45:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 90915,
+"restaurantname": "Bar und Restaurant THE LOCKS",
+"latitude": 53.656502,
+"longitude": 10.086721,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566818,
+"datemadeutc": "2013-03-26T18:49:22",
+"shiftdatetime": "2013-03-26T20:45:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 91671,
+"restaurantname": "Chisou Chiswick",
+"latitude": 51.491865,
+"longitude": -0.262479,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566819,
+"datemadeutc": "2013-03-26T18:49:38",
+"shiftdatetime": "2013-04-06T19:45:00",
+"partysize":4,
+"billingtype": "restref",
+"rid": 94284,
+"restaurantname": "Outlaw's Seafood & Grill",
+"latitude": 50.545866,
+"longitude": -4.915447,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+]
+}

@@ -3,7 +3,7 @@ function setClassifiers(classifierManager) {
     classifierManager.SetClassifier("latitude", new ApproximateClassifier(5));
     classifierManager.SetClassifier("shiftdatetime", new DayClassifier());
     classifierManager.SetClassifier("datemadeutc", new DayClassifier());
-    classifierManager.SetClassifier("DateTime", new DayClassifier());
+//    classifierManager.SetClassifier("DateTime", new DayClassifier());
 }
 
 function DataManager(classifierManager){
@@ -27,7 +27,7 @@ function DataManager(classifierManager){
                     }
                 }
                 return true;
-            }).slice(0,500);
+            }).slice(0,100);
         },
         GetAllData: function(data) {
             return nodes;
@@ -65,27 +65,43 @@ function BuildGroupByDaySettings(dataManager) {
     $('#groupByDay').append(html);
 }
 
+function extracted(forceRunner, dataManager, sigmaAdapter) {
+    $('.group-datetime').click(function () {
+        forceRunner.Stop();
+        var groupId = $(this).attr("data-group-id");
+        dataManager.AddFilter("DateTime", groupId);
+        sigmaAdapter.UpdateNodes();
+        setTimeout(function () {
+            forceRunner.Run()
+        }, 1000);
+    });
+}
+
+var count = 0
+function GetMoreData(dataSource, dataManager, sigmaAdapter) {
+    dataSource.GetMoreData(function (data) {
+        dataManager.AddData(data);
+        sigmaAdapter.UpdateNodes();
+        if (count++ <4) {
+            GetMoreData(dataSource, dataManager, sigmaAdapter);
+        }
+    });
+}
 $(document).ready(function(){
     var dataSource = new DataSource();
-    dataSource.GetData(0,10000,function(data) {
+    dataSource.GetData(function(data) {
         var classifierManager = new ClassifiersManager(new EqualClassifier());
         setClassifiers(classifierManager);
         var dataManager = new DataManager(classifierManager).AddData(data);
-        dataManager.AddFilter("DateTime","16");
-        dataManager.AddFilter("DateTime","17");
+//        dataManager.AddFilter("DateTime","16");
+//        dataManager.AddFilter("DateTime","17");
         var sigmaAdapter = new SigmaAdapter(classifierManager, dataManager).Init(data, "#graph");
-        new SettingsView().PopulateSettings(data).AddListeners(sigmaAdapter);
-        var forceRunner = new ForceAtlasRunner(sigmaAdapter, "#start_stop").Run();
         new PopUpManager(sigmaAdapter, '#graph').AddPopUp();
-        BuildGroupByDaySettings(dataManager);
-        $('.group-datetime').click(function(){
-             forceRunner.Stop();
-            var groupId = $(this).attr("data-group-id");
-            dataManager.AddFilter("DateTime",groupId);
-            sigmaAdapter.UpdateNodes();
-            setTimeout(function(){forceRunner.Run()},1000);
-            //forceRunner.Run();
-        });
+        var forceRunner = new ForceAtlasRunner(sigmaAdapter, "#start_stop").Run();
+        new SettingsView().PopulateSettings(data).AddListeners(sigmaAdapter);
+        GetMoreData(dataSource, dataManager, sigmaAdapter);
+        //BuildGroupByDaySettings(dataManager);
+        //extracted(forceRunner, dataManager, sigmaAdapter);
     });
 })
 

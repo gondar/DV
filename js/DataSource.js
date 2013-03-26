@@ -1,4 +1,36 @@
 function DataSource(){
+    var head = "http://localhost:4567/reservations/created";
+    var prev = head;
+    var downloaded = [];
+
+    function GetMoreData(executeWhenFinished, url){
+        if (url == undefined || url == null || url == "") {
+            url = head;
+        }
+        $.getJSON(url,function(data){
+            if ($.inArray(data.href_self, downloaded) != -1){
+                GetMoreData(executeWhenFinished,data.href_prev);
+                return;
+            }
+            downloaded.push(data.href_self);
+            executeWhenFinished(data);
+        });
+    };
+
+    return {
+        GetData: function(executeWhenFinished){
+            $.getJSON(head,function(data){
+                downloaded.push(data.href_self);
+                executeWhenFinished(data);
+            });
+        },
+
+        GetMoreData: GetMoreData
+    }
+}
+
+
+function EUMongoDataSource(){
     return {
         GetData: function(startFrom, end, executeWhenFinished){
             $.getJSON("http://localhost:4567/"+startFrom+"/"+end,function(data){

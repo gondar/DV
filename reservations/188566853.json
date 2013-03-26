@@ -1,0 +1,204 @@
+﻿{
+"title": "Reservation Feed",
+"href_self": "http://feeds-eu.otcorp.opentable.com/reservations/created/188566853.json",
+"href_prev": "http://localhost:4567/reservations/188566839.json",
+"max_resid": 188566853,
+"max_datemadeutc": "2013-03-26T18:51:46",
+"reservations": [
+{
+"resid": 188566840,
+"datemadeutc": "2013-03-26T18:50:53",
+"shiftdatetime": "2013-04-02T18:30:00",
+"partysize":6,
+"billingtype": "restref",
+"rid": 92220,
+"restaurantname": "Restaurant Sümela II",
+"latitude": 50.116342,
+"longitude": 8.67742,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566841,
+"datemadeutc": "2013-03-26T18:50:55",
+"shiftdatetime": "2013-04-11T19:00:00",
+"partysize":4,
+"billingtype": "restref",
+"rid": 10227,
+"restaurantname": "Restaurant die GIESSEREI",
+"latitude": 47.411643,
+"longitude": 8.549464,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566842,
+"datemadeutc": "2013-03-26T18:50:56",
+"shiftdatetime": "2013-04-03T18:00:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 17859,
+"restaurantname": "ManThei Sushi Restaurant Bilk",
+"latitude": 51.207081,
+"longitude": 6.764783,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566843,
+"datemadeutc": "2013-03-26T18:50:57",
+"shiftdatetime": "2013-03-31T13:00:00",
+"partysize":3,
+"billingtype": "standard",
+"rid": 95454,
+"restaurantname": "Blue Check Restaurant",
+"latitude": 51.644252,
+"longitude": -0.362026,
+"partnerid":1421,
+"partnername": "Dinner Deals - TT"
+}
+,
+{
+"resid": 188566844,
+"datemadeutc": "2013-03-26T18:51:01",
+"shiftdatetime": "2013-03-27T17:15:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 31852,
+"restaurantname": "VM-Stage-US-3",
+"latitude": -91,
+"longitude": -181,
+"partnerid":1046,
+"partnername": "Yelp"
+}
+,
+{
+"resid": 188566845,
+"datemadeutc": "2013-03-26T18:51:02",
+"shiftdatetime": "2013-03-30T13:00:00",
+"partysize":4,
+"billingtype": "restref",
+"rid": 11880,
+"restaurantname": "Spatenhaus an der Oper (gut bürgerlich)",
+"latitude": 48.139686,
+"longitude": 11.577445,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566846,
+"datemadeutc": "2013-03-26T18:51:06",
+"shiftdatetime": "2013-03-27T20:30:00",
+"partysize":3,
+"billingtype": "standard",
+"rid": 68899,
+"restaurantname": "Sake No Hana",
+"latitude": 51.506639,
+"longitude": -0.139463,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566847,
+"datemadeutc": "2013-03-26T18:51:07",
+"shiftdatetime": "2013-03-27T19:45:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 80218,
+"restaurantname": "The Narrow",
+"latitude": 51.509651,
+"longitude": -0.037808,
+"partnerid":1007,
+"partnername": "toptable iPhone App"
+}
+,
+{
+"resid": 188566848,
+"datemadeutc": "2013-03-26T18:51:09",
+"shiftdatetime": "2013-03-30T19:30:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 11550,
+"restaurantname": "Freinsheimer Hof, Restaurant und Hotel",
+"latitude": 49.506295,
+"longitude": 8.212377,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566849,
+"datemadeutc": "2013-03-26T18:51:09",
+"shiftdatetime": "2013-03-27T18:30:00",
+"partysize":6,
+"billingtype": "restref",
+"rid": 74272,
+"restaurantname": "The Mulroy",
+"latitude": 55.949597,
+"longitude": -3.212194,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566850,
+"datemadeutc": "2013-03-26T18:51:11",
+"shiftdatetime": "2013-03-27T11:15:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 31852,
+"restaurantname": "VM-Stage-US-3",
+"latitude": -91,
+"longitude": -181,
+"partnerid":1046,
+"partnername": "Yelp"
+}
+,
+{
+"resid": 188566851,
+"datemadeutc": "2013-03-26T18:51:34",
+"shiftdatetime": "2013-03-26T19:15:00",
+"partysize":3,
+"billingtype": "standard",
+"rid": 95334,
+"restaurantname": "Brawn",
+"latitude": 51.528891,
+"longitude": -0.07021,
+"partnerid":1007,
+"partnername": "toptable iPhone App"
+}
+,
+{
+"resid": 188566852,
+"datemadeutc": "2013-03-26T18:51:41",
+"shiftdatetime": "2013-03-31T15:15:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 48490,
+"restaurantname": "The Secret Garden",
+"latitude": 51.125725,
+"longitude": 0.942973,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566853,
+"datemadeutc": "2013-03-26T18:51:46",
+"shiftdatetime": "2013-03-26T19:45:00",
+"partysize":4,
+"billingtype": "standard",
+"rid": 54478,
+"restaurantname": "Grace",
+"latitude": 51.510904,
+"longitude": -0.134019,
+"partnerid":1043,
+"partnername": "toptable mobile site"
+}
+]
+}

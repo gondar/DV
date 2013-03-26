@@ -1,0 +1,162 @@
+﻿{
+"title": "Reservation Feed",
+"href_self": "http://feeds-eu.otcorp.opentable.com/reservations/created/188566864.json",
+"href_prev": "http://localhost:4567/reservations/188566853.json",
+"max_resid": 188566864,
+"max_datemadeutc": "2013-03-26T18:52:49",
+"reservations": [
+{
+"resid": 188566854,
+"datemadeutc": "2013-03-26T18:51:57",
+"shiftdatetime": "2013-03-26T20:00:00",
+"partysize":3,
+"billingtype": "standard",
+"rid": 93054,
+"restaurantname": "Brompton Asian Brasserie",
+"latitude": 51.497174,
+"longitude": -0.167618,
+"partnerid":1007,
+"partnername": "toptable iPhone App"
+}
+,
+{
+"resid": 188566855,
+"datemadeutc": "2013-03-26T18:52:02",
+"shiftdatetime": "2013-03-26T20:00:00",
+"partysize":3,
+"billingtype": "standard",
+"rid": 94770,
+"restaurantname": "Mango Room Restaurant",
+"latitude": 51.539701,
+"longitude": -0.142564,
+"partnerid":1043,
+"partnername": "toptable mobile site"
+}
+,
+{
+"resid": 188566856,
+"datemadeutc": "2013-03-26T18:52:10",
+"shiftdatetime": "2013-03-27T17:15:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 30058,
+"restaurantname": "Goodman",
+"latitude": 51.512335,
+"longitude": -0.144334,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566857,
+"datemadeutc": "2013-03-26T18:52:15",
+"shiftdatetime": "2013-03-26T20:00:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 93513,
+"restaurantname": "Smiths of Smithfield Top Floor",
+"latitude": 51.520116,
+"longitude": -0.100388,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566858,
+"datemadeutc": "2013-03-26T18:52:20",
+"shiftdatetime": "2013-04-11T19:15:00",
+"partysize":6,
+"billingtype": "standard",
+"rid": 4825,
+"restaurantname": "Automat",
+"latitude": 51.509033,
+"longitude": -0.142849,
+"partnerid":1043,
+"partnername": "toptable mobile site"
+}
+,
+{
+"resid": 188566859,
+"datemadeutc": "2013-03-26T18:52:26",
+"shiftdatetime": "2013-03-29T18:30:00",
+"partysize":3,
+"billingtype": "standard",
+"rid": 52804,
+"restaurantname": "Hakkasan Mayfair",
+"latitude": 51.510381,
+"longitude": -0.144564,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566860,
+"datemadeutc": "2013-03-26T18:52:32",
+"shiftdatetime": "2013-03-29T14:30:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 93015,
+"restaurantname": "Middletons Steakhouse & Grill",
+"latitude": 52.62662,
+"longitude": 1.295902,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566861,
+"datemadeutc": "2013-03-26T18:52:33",
+"shiftdatetime": "2013-03-29T13:30:00",
+"partysize":4,
+"billingtype": "standard",
+"rid": 87331,
+"restaurantname": "Arbutus",
+"latitude": 51.514404,
+"longitude": -0.132169,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566862,
+"datemadeutc": "2013-03-26T18:52:36",
+"shiftdatetime": "2013-03-27T17:00:00",
+"partysize":6,
+"billingtype": "restref",
+"rid": 30052,
+"restaurantname": "Charcoals",
+"latitude": 55.861639,
+"longitude": -4.256592,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566863,
+"datemadeutc": "2013-03-26T18:52:39",
+"shiftdatetime": "2013-03-30T12:00:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 40360,
+"restaurantname": "Yauatcha",
+"latitude": 51.513454,
+"longitude": -0.136247,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566864,
+"datemadeutc": "2013-03-26T18:52:49",
+"shiftdatetime": "2013-04-13T12:30:00",
+"partysize":3,
+"billingtype": "restref",
+"rid": 17298,
+"restaurantname": "Restaurant Eckstein",
+"latitude": 52.4974,
+"longitude": 13.35412,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+]
+}

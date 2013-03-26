@@ -1,0 +1,218 @@
+﻿{
+"title": "Reservation Feed",
+"href_self": "http://feeds-eu.otcorp.opentable.com/reservations/created/188566879.json",
+"href_prev": "http://localhost:4567/reservations/188566864.json",
+"max_resid": 188566879,
+"max_datemadeutc": "2013-03-26T18:53:48",
+"reservations": [
+{
+"resid": 188566865,
+"datemadeutc": "2013-03-26T18:52:52",
+"shiftdatetime": "2013-03-27T20:00:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 80086,
+"restaurantname": "Annexe Birmingham",
+"latitude": 52.483653,
+"longitude": -1.892638,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566866,
+"datemadeutc": "2013-03-26T18:53:06",
+"shiftdatetime": "2013-04-02T13:00:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 24826,
+"restaurantname": "Edera Restaurant",
+"latitude": 51.506187,
+"longitude": -0.209267,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566867,
+"datemadeutc": "2013-03-26T18:53:13",
+"shiftdatetime": "2013-03-27T17:30:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 38335,
+"restaurantname": "Lunya",
+"latitude": 53.403631,
+"longitude": -2.984169,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566868,
+"datemadeutc": "2013-03-26T18:53:13",
+"shiftdatetime": "2013-03-28T18:45:00",
+"partysize":3,
+"billingtype": "restref",
+"rid": 17247,
+"restaurantname": "Zeppelin XXL Restaurant",
+"latitude": 53.62942,
+"longitude": 11.40999,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566869,
+"datemadeutc": "2013-03-26T18:53:15",
+"shiftdatetime": "2013-05-04T19:00:00",
+"partysize":4,
+"billingtype": "restref",
+"rid": 94578,
+"restaurantname": "Fat Buddha Durham",
+"latitude": 54.778675,
+"longitude": -1.575133,
+"partnerid":1043,
+"partnername": "toptable mobile site"
+}
+,
+{
+"resid": 188566870,
+"datemadeutc": "2013-03-26T18:53:23",
+"shiftdatetime": "2013-03-26T19:30:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 74275,
+"restaurantname": "Khyber Indian Restaurant",
+"latitude": 51.368347,
+"longitude": -0.099357,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566871,
+"datemadeutc": "2013-03-26T18:53:25",
+"shiftdatetime": "2013-03-26T20:30:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 90858,
+"restaurantname": "Captain's Finest",
+"latitude": 48.264473,
+"longitude": 7.719587,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566872,
+"datemadeutc": "2013-03-26T18:53:26",
+"shiftdatetime": "2013-03-27T20:15:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 94311,
+"restaurantname": "Buddha Bar London",
+"latitude": 51.501596,
+"longitude": -0.162047,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566873,
+"datemadeutc": "2013-03-26T18:53:29",
+"shiftdatetime": "2013-03-30T20:45:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 54205,
+"restaurantname": "Ottolenghi",
+"latitude": 51.539762,
+"longitude": -0.102466,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566874,
+"datemadeutc": "2013-03-26T18:53:31",
+"shiftdatetime": "2013-03-27T18:15:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 22839,
+"restaurantname": "Galvin at Windows",
+"latitude": 51.505596,
+"longitude": -0.150176,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566875,
+"datemadeutc": "2013-03-26T18:53:32",
+"shiftdatetime": "2013-04-01T10:30:00",
+"partysize":4,
+"billingtype": "standard",
+"rid": 92898,
+"restaurantname": "Mio - Ristorante, Bar, Lounge",
+"latitude": 52.52086,
+"longitude": 13.4093,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566876,
+"datemadeutc": "2013-03-26T18:53:40",
+"shiftdatetime": "2013-03-27T13:00:00",
+"partysize":2,
+"billingtype": "restref",
+"rid": 18000,
+"restaurantname": "Atlas Restaurant & Kochsalon",
+"latitude": 53.56086,
+"longitude": 9.92732,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566877,
+"datemadeutc": "2013-03-26T18:53:42",
+"shiftdatetime": "2013-03-27T20:45:00",
+"partysize":4,
+"billingtype": "restref",
+"rid": 85780,
+"restaurantname": "STK - London",
+"latitude": 51.511767,
+"longitude": -0.118591,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566878,
+"datemadeutc": "2013-03-26T18:53:42",
+"shiftdatetime": "2013-04-01T17:30:00",
+"partysize":5,
+"billingtype": "restref",
+"rid": 16221,
+"restaurantname": "Landgasthof Pleister Mühle",
+"latitude": 51.9637,
+"longitude": 7.70187,
+"partnerid":1,
+"partnername": "OpenTable.com"
+}
+,
+{
+"resid": 188566879,
+"datemadeutc": "2013-03-26T18:53:48",
+"shiftdatetime": "2013-03-28T19:30:00",
+"partysize":2,
+"billingtype": "standard",
+"rid": 57481,
+"restaurantname": "Kopapa",
+"latitude": 51.513613,
+"longitude": -0.127253,
+"partnerid":1513,
+"partnername": "Time Out (V3) - TT"
+}
+]
+}
