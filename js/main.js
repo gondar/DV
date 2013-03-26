@@ -2,7 +2,7 @@ function setClassifiers(classifierManager) {
     classifierManager.SetClassifier("longitude", new ApproximateClassifier(5));
     classifierManager.SetClassifier("latitude", new ApproximateClassifier(5));
     classifierManager.SetClassifier("shiftdatetime", new DayClassifier());
-    classifierManager.SetClassifier("datemadeutc", new DayClassifier());
+    classifierManager.SetClassifier("datemadeutc", new MinuteClassifier());
 //    classifierManager.SetClassifier("DateTime", new DayClassifier());
 }
 
@@ -41,12 +41,12 @@ function DataManager(classifierManager){
     }
 }
 
-function GroupByDay(reservations){
+function Group(property, reservations, classifierManager){
     groups = {}
-    var classifier = new DayClassifier();
     for (var reservationId in reservations) {
         var reservation = reservations[reservationId];
-        var key = classifier.GetKey(reservation.DateTime);
+        var classifier = classifierManager.GetClassifier(property);
+        var key = classifier.GetKey(reservation[property]);
         if (!groups.hasOwnProperty(key)) {
             groups[key] = 0;
         }
@@ -55,9 +55,10 @@ function GroupByDay(reservations){
     return groups;
  }
 
-function BuildGroupByDaySettings(dataManager) {
+function BuildGroupByDaySettings(dataManager, classifierManager) {
     var html = "";
-    var groups = GroupByDay(dataManager.GetAllData());
+    $('#groupByDay').html("");
+    var groups = Group("datemadeutc", dataManager.GetAllData(),classifierManager);
     for (var groupId in groups) {
         var group = groups[groupId];
         html += "<button class='btn btn-block group-datetime' data-group-id='" + groupId + "'>" + groupId + "(" + group + ")</button>";
@@ -65,11 +66,11 @@ function BuildGroupByDaySettings(dataManager) {
     $('#groupByDay').append(html);
 }
 
-function extracted(forceRunner, dataManager, sigmaAdapter) {
+function AddListenerToFilters(forceRunner, dataManager, sigmaAdapter) {
     $('.group-datetime').click(function () {
         forceRunner.Stop();
         var groupId = $(this).attr("data-group-id");
-        dataManager.AddFilter("DateTime", groupId);
+        dataManager.AddFilter("datemadeutc", groupId);
         sigmaAdapter.UpdateNodes();
         setTimeout(function () {
             forceRunner.Run()
@@ -78,13 +79,15 @@ function extracted(forceRunner, dataManager, sigmaAdapter) {
 }
 
 var count = 0
-function GetMoreData(dataSource, dataManager, sigmaAdapter) {
+function GetMoreData(dataSource, dataManager, actionToExecute) {
     dataSource.GetMoreData(function (data) {
         dataManager.AddData(data);
-        sigmaAdapter.UpdateNodes();
         if (count++ <4) {
-            GetMoreData(dataSource, dataManager, sigmaAdapter);
+            GetMoreData(dataSource, dataManager, actionToExecute);
+        } else {
+            actionToExecute();
         }
+
     });
 }
 $(document).ready(function(){
@@ -93,15 +96,15 @@ $(document).ready(function(){
         var classifierManager = new ClassifiersManager(new EqualClassifier());
         setClassifiers(classifierManager);
         var dataManager = new DataManager(classifierManager).AddData(data);
-//        dataManager.AddFilter("DateTime","16");
-//        dataManager.AddFilter("DateTime","17");
         var sigmaAdapter = new SigmaAdapter(classifierManager, dataManager).Init(data, "#graph");
         new PopUpManager(sigmaAdapter, '#graph').AddPopUp();
         var forceRunner = new ForceAtlasRunner(sigmaAdapter, "#start_stop").Run();
         new SettingsView().PopulateSettings(data).AddListeners(sigmaAdapter);
-        GetMoreData(dataSource, dataManager, sigmaAdapter);
-        //BuildGroupByDaySettings(dataManager);
-        //extracted(forceRunner, dataManager, sigmaAdapter);
+        GetMoreData(dataSource, dataManager, function(){
+            BuildGroupByDaySettings(dataManager,classifierManager);
+            AddListenerToFilters(forceRunner, dataManager, sigmaAdapter);
+            sigmaAdapter.UpdateNodes();
+        });
     });
 })
 

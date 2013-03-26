@@ -40,14 +40,18 @@ function SigmaAdapter(classifierManager, dataManager) {
     }
 
     function addNodes(data) {
-        var reservations = data;//.reservations;
+        var reservations = data;
         for (var reservationId in reservations) {
+            var x = Math.random();
+            var y = Math.random();
+            if (x == NaN || y == NaN)
+                alert("x: "+x+"y"+y);
             var reservation = reservations[reservationId];
-            sigInst.addNode(nodesCounter++, {
+            sigInst.addNode("n"+nodesCounter++, {
                 color: "#ffffff",
                 size: 1,
-                x: Math.random(),
-                y: Math.random(),
+                x: x,
+                y: y,
                 reservation: reservation,
                 label: ""
             });
