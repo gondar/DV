@@ -4,7 +4,7 @@
     <list default="true" id="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" name="Default" comment="" />
     <ignored path="DV.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364347499640" ignored="false" />
+    <file path="/main.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364348164578" ignored="false" />
     <file path="/index.html" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364346725953" ignored="false" />
     <file path="/DataSource.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364327111676" ignored="false" />
     <file path="/PopUp.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363290306308" ignored="false" />
@@ -13,7 +13,7 @@
     <file path="/main.css" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363365108041" ignored="false" />
     <file path="/ForceAtlasRunner.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364124185656" ignored="false" />
     <file path="/SigmaAdapter.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364338412062" ignored="false" />
-    <file path="/SettingsView.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363368053165" ignored="false" />
+    <file path="/SettingsView.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364348177890" ignored="false" />
     <file path="/PopUpManager.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363625914999" ignored="false" />
     <file path="/DayClassifier.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364338817421" ignored="false" />
     <file path="/DataManager.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364344830015" ignored="false" />
@@ -66,7 +66,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="92" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.6920354">
+            <state line="20" column="39" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.6017699">
               <folding />
             </state>
           </provider>
@@ -102,7 +102,7 @@
       <file leaf-file-name="SettingsView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="16" selection-start="272" selection-end="304" vertical-scroll-proportion="0.0">
+            <state line="112" column="54" selection-start="4115" selection-end="4115" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -141,7 +141,6 @@
         <option value="$PROJECT_DIR$/js/Classifiers/EqualClassifier.js" />
         <option value="$PROJECT_DIR$/js/Classifiers/ApproximateClassifier.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/js/SettingsView.js" />
         <option value="$PROJECT_DIR$/js/PopUpManager.js" />
         <option value="$PROJECT_DIR$/js/ForceAtlasRunner.js" />
         <option value="$PROJECT_DIR$/js/SigmaAdapter.js" />
@@ -149,6 +148,7 @@
         <option value="$PROJECT_DIR$/js/DataSource.js" />
         <option value="$PROJECT_DIR$/js/DataManager.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/SettingsView.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
@@ -443,13 +443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="16" selection-start="272" selection-end="304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/DataSource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="1" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
@@ -471,9 +464,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="54" selection-start="4115" selection-end="4115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="92" selection-start="2180" selection-end="2180" vertical-scroll-proportion="0.6920354">
+        <state line="20" column="39" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.6017699">
           <folding />
         </state>
       </provider>
