@@ -6,17 +6,35 @@ function setClassifiers(classifierManager) {
 //    classifierManager.SetClassifier("DateTime", new DayClassifier());
 }
 
-function Animate(sigmaAdapter){
+function Animator(){
     var speed = 5000;
-    $("#partysizeEdgeSettings").trigger("click");
-    setTimeout(function(){
+    var isEnabled = false;
+
+    function Animate(){
         $("#partysizeEdgeSettings").trigger("click");
-        $("#partnernameEdgeSettings").trigger("click");
+        setTimeout(function(){
+            $("#partysizeEdgeSettings").trigger("click");
+            $("#partnernameEdgeSettings").trigger("click");
             setTimeout(function(){
                 $("#partnernameEdgeSettings").trigger("click");
-                Animate(sigmaAdapter);
+                if (isEnabled)
+                    Animate();
             },speed);
-    },speed)
+        },speed);
+    }
+
+    return {
+        Start: function(){
+            if (!isEnabled) {
+                isEnabled = true;
+                Animate();
+            }
+        },
+        Stop: function(){
+            isEnabled = false;
+        }
+
+    }
 }
 
 $(document).ready(function(){
@@ -28,10 +46,11 @@ $(document).ready(function(){
         var sigmaAdapter = new SigmaAdapter(classifierManager, dataManager).Init(data, "#graph");
         new PopUpManager(sigmaAdapter, '#graph').AddPopUp();
         var forceRunner = new ForceAtlasRunner(sigmaAdapter, "#start_stop").Run();
-        var settingsView = new SettingsView(forceRunner, dataManager, sigmaAdapter,classifierManager).PopulateSettings(data).AddListeners(sigmaAdapter);
+        var animator = new Animator();
+        var settingsView = new SettingsView(forceRunner, dataManager, sigmaAdapter,classifierManager, animator).PopulateSettings(data).AddListeners(sigmaAdapter);
         GetMoreData(dataSource, dataManager, function(){
             settingsView.UpdateState();
-            Animate(sigmaAdapter);
+            //animator.Start();
         });
     });
 })

@@ -1,4 +1,4 @@
-function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager){
+function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager, animator){
     function InitEdgeSettings(graph) {
         var edges = {};
         $(".edge-setting").click(function () {
@@ -38,14 +38,12 @@ function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager)
         }
     }
 
-
     function AddMaxNodes() {
         var html = "";
         $('#groupByDay').html("");
         html+= "<div class='input-append'><input class='span2' id='nodesCountTextBox' type='text' value='100'><span class='add-on'>nodes</span></div>"
         $('#groupByDay').append(html);
     }
-
 
     function AddListenerToMaxNodesCount(){
         function SortByName(a, b){
@@ -95,6 +93,25 @@ function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager)
         $("#nodesCountTextBox").trigger("change");
     }
 
+    function AddAnimationStartStopListener(){
+        var state = 1;
+        $("#startStopAnimation").click(function () {
+            if (state == 0) {
+                state = 1;
+                $(this).removeClass("btn-success");
+                $(this).addClass("btn-warning");
+                $(this).attr("value", "Stop Animation");
+                animator.Start();
+            } else {
+                state = 0;
+                $(this).removeClass("btn-warning");
+                $(this).addClass("btn-success");
+                $(this).attr("value", "Start Animation");
+                animator.Stop();
+            }
+        });
+    }
+
     return {
         PopulateSettings: function(data){
             var reservation = data.reservations[0];
@@ -107,6 +124,7 @@ function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager)
             InitEdgeSettings(graph);
             InitColorSettings(graph);
             AddListenerToMaxNodesCount();
+            AddAnimationStartStopListener();
             return this;
         },
         UpdateState: function(){
