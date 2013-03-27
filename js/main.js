@@ -6,90 +6,62 @@ function setClassifiers(classifierManager) {
 //    classifierManager.SetClassifier("DateTime", new DayClassifier());
 }
 
-function DataManager(classifierManager){
-    var nodes = [];
-    var filters = {};
-    return {
-        AddData: function(data){
-            var reservations = data.reservations;
-            for (var reservationId in reservations) {
-                var reservation = reservations[reservationId];
-                nodes.push(reservation);
-            }
-            return this;
-        },
-        GetData: function(data) {
-            return nodes.filter(function(node){
-                for (var property in filters) {
-                    var key = classifierManager.GetClassifier(property).GetKey(node[property]);
-                    if ($.inArray(key.toString(), filters[property]) == -1) {
-                        return false;
-                    }
-                }
-                return true;
-            }).slice(0,100);
-        },
-        GetAllData: function(data) {
-            return nodes;
-        },
-        AddFilter: function(property, value){
-            if (!filters.hasOwnProperty(property)){
-                filters[property] = [];
-            }
-            filters[property].push(value);
-        }
-    }
-}
-
-function Group(property, reservations, classifierManager){
-    groups = {}
-    for (var reservationId in reservations) {
-        var reservation = reservations[reservationId];
-        var classifier = classifierManager.GetClassifier(property);
-        var key = classifier.GetKey(reservation[property]);
-        if (!groups.hasOwnProperty(key)) {
-            groups[key] = 0;
-        }
-        groups[key]++;
-    }
-    return groups;
- }
-
-function BuildGroupByDaySettings(dataManager, classifierManager) {
+function BuildGroupByDaySettings(dataManager) {
     var html = "";
     $('#groupByDay').html("");
-    var groups = Group("datemadeutc", dataManager.GetAllData(),classifierManager);
-    for (var groupId in groups) {
-        var group = groups[groupId];
-        html += "<button class='btn btn-block group-datetime' data-group-id='" + groupId + "'>" + groupId + "(" + group + ")</button>";
-    }
+    html+= "<div class='input-append'><input class='span2' id='nodesCountTextBox' type='text' value='40'><span class='add-on'>nodes</span></div>"
     $('#groupByDay').append(html);
 }
 
-function AddListenerToFilters(forceRunner, dataManager, sigmaAdapter) {
-    $('.group-datetime').click(function () {
+
+function AddListenerToMaxNodesCount(forceRunner, dataManager, sigmaAdapter, classifierManager){
+    function SortByName(a, b){
+        var aName = a.Name.toLowerCase();
+        var bName = b.Name.toLowerCase();
+        return ((aName < bName) ? -1 : ((aName > bName) ? 1 : 0));
+    }
+
+    function Group(property, reservations, classifierManager){
+        groups = {}
+        for (var reservationId in reservations) {
+            var reservation = reservations[reservationId];
+            var classifier = classifierManager.GetClassifier(property);
+            var key = classifier.GetKey(reservation[property]);
+            if (!groups.hasOwnProperty(key)) {
+                groups[key] = 0;
+            }
+            groups[key]++;
+        }
+        groupsArray = [];
+        for (var key in groups) {
+            groupsArray.push({Name: key, Count: groups[key]})
+        }
+
+        return groupsArray.sort(SortByName).reverse();
+    }
+
+    $("#nodesCountTextBox").change(function(){
+        var max = $(this).val();
         forceRunner.Stop();
-        var groupId = $(this).attr("data-group-id");
-        dataManager.AddFilter("datemadeutc", groupId);
+        var groups = Group("datemadeutc",dataManager.GetAllData(),classifierManager);
+        var i =0;
+        var added = 0;
+        while(groups[i] != undefined && added+groups[i].Count < max) {
+            added += groups[i].Count;
+            dataManager.AddFilter("datemadeutc",groups[i].Name);
+            i++;
+        }
+        $("#displayedTimes").html("<div>Added "+added+" nodes which show reservations in the last "+(i)+ " minutes</div>");
+        dataManager.SetMaxNodesAllowed(max);
         sigmaAdapter.UpdateNodes();
         setTimeout(function () {
             forceRunner.Run()
         }, 1000);
     });
+
+    $("#nodesCountTextBox").trigger("change");
 }
 
-var count = 0
-function GetMoreData(dataSource, dataManager, actionToExecute) {
-    dataSource.GetMoreData(function (data) {
-        dataManager.AddData(data);
-        if (count++ <4) {
-            GetMoreData(dataSource, dataManager, actionToExecute);
-        } else {
-            actionToExecute();
-        }
-
-    });
-}
 $(document).ready(function(){
     var dataSource = new DataSource();
     dataSource.GetData(function(data) {
@@ -101,8 +73,8 @@ $(document).ready(function(){
         var forceRunner = new ForceAtlasRunner(sigmaAdapter, "#start_stop").Run();
         new SettingsView().PopulateSettings(data).AddListeners(sigmaAdapter);
         GetMoreData(dataSource, dataManager, function(){
-            BuildGroupByDaySettings(dataManager,classifierManager);
-            AddListenerToFilters(forceRunner, dataManager, sigmaAdapter);
+            BuildGroupByDaySettings(dataManager);
+            AddListenerToMaxNodesCount(forceRunner, dataManager, sigmaAdapter,classifierManager);
             sigmaAdapter.UpdateNodes();
         });
     });

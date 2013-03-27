@@ -29,6 +29,19 @@ function DataSource(){
     }
 }
 
+var count = 0
+function GetMoreData(dataSource, dataManager, actionToExecute) {
+    dataSource.GetMoreData(function (data) {
+        dataManager.AddData(data);
+        if (count++ <4) {
+            GetMoreData(dataSource, dataManager, actionToExecute);
+        } else {
+            actionToExecute();
+        }
+
+    });
+}
+
 
 function EUMongoDataSource(){
     return {
