@@ -6,6 +6,18 @@ function setClassifiers(classifierManager) {
 //    classifierManager.SetClassifier("DateTime", new DayClassifier());
 }
 
+function Animate(sigmaAdapter){
+    var speed = 5000;
+    $("#partysizeEdgeSettings").trigger("click");
+    setTimeout(function(){
+        $("#partysizeEdgeSettings").trigger("click");
+        $("#partnernameEdgeSettings").trigger("click");
+            setTimeout(function(){
+                $("#partnernameEdgeSettings").trigger("click");
+                Animate(sigmaAdapter);
+            },speed);
+    },speed)
+}
 
 $(document).ready(function(){
     var dataSource = new DataSource();
@@ -19,6 +31,7 @@ $(document).ready(function(){
         var settingsView = new SettingsView(forceRunner, dataManager, sigmaAdapter,classifierManager).PopulateSettings(data).AddListeners(sigmaAdapter);
         GetMoreData(dataSource, dataManager, function(){
             settingsView.UpdateState();
+            Animate(sigmaAdapter);
         });
     });
 })

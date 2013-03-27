@@ -42,7 +42,7 @@ function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager)
     function AddMaxNodes() {
         var html = "";
         $('#groupByDay').html("");
-        html+= "<div class='input-append'><input class='span2' id='nodesCountTextBox' type='text' value='40'><span class='add-on'>nodes</span></div>"
+        html+= "<div class='input-append'><input class='span2' id='nodesCountTextBox' type='text' value='100'><span class='add-on'>nodes</span></div>"
         $('#groupByDay').append(html);
     }
 
