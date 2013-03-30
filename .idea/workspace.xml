@@ -4,19 +4,20 @@
     <list default="true" id="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" name="Default" comment="" />
     <ignored path="DV.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/main.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364350601203" ignored="false" />
-    <file path="/index.html" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364351020343" ignored="false" />
+    <file path="/main.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364651767182" ignored="false" />
+    <file path="/index.html" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364651617646" ignored="false" />
     <file path="/DataSource.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364327111676" ignored="false" />
     <file path="/PopUp.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363290306308" ignored="false" />
     <file path="/*.regexp" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363290598951" ignored="false" />
     <file path="/fragment.js2" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364325556397" ignored="false" />
-    <file path="/main.css" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363365108041" ignored="false" />
+    <file path="/main.css" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364649746153" ignored="false" />
     <file path="/ForceAtlasRunner.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364124185656" ignored="false" />
-    <file path="/SigmaAdapter.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364338412062" ignored="false" />
+    <file path="/SigmaAdapter.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364648017259" ignored="false" />
     <file path="/SettingsView.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364350946375" ignored="false" />
     <file path="/PopUpManager.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363625914999" ignored="false" />
     <file path="/DayClassifier.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364338817421" ignored="false" />
     <file path="/DataManager.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364344830015" ignored="false" />
+    <file path="/notify.css" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364651587201" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +37,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="123" selection-start="2753" selection-end="2753" vertical-scroll-proportion="-6.3461537">
+            <state line="25" column="30" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.20795107">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -50,7 +51,16 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="14" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0">
+            <state line="16" column="60" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notify.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/notify.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="24" selection-start="593" selection-end="593" vertical-scroll-proportion="-9.04">
               <folding />
             </state>
           </provider>
@@ -65,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingsView.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SettingsView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="53" selection-start="3923" selection-end="3923" vertical-scroll-proportion="0.5068259">
+            <state line="12" column="23" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,7 +105,16 @@
       <file leaf-file-name="SigmaAdapter.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="26" selection-start="3653" selection-end="3682" vertical-scroll-proportion="0.0">
+            <state line="32" column="39" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="10" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,24 +134,25 @@
         <option value="$PROJECT_DIR$/js/Classifiers/ClassifiersManager.js" />
         <option value="$PROJECT_DIR$/js/Classifiers/EqualClassifier.js" />
         <option value="$PROJECT_DIR$/js/Classifiers/ApproximateClassifier.js" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/PopUpManager.js" />
         <option value="$PROJECT_DIR$/js/ForceAtlasRunner.js" />
-        <option value="$PROJECT_DIR$/js/SigmaAdapter.js" />
         <option value="$PROJECT_DIR$/js/Classifiers/DayClassifier.js" />
         <option value="$PROJECT_DIR$/js/DataSource.js" />
         <option value="$PROJECT_DIR$/js/DataManager.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/SettingsView.js" />
+        <option value="$PROJECT_DIR$/js/SigmaAdapter.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/notify.css" />
+        <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="1288" />
-    <option name="height" value="778" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -150,7 +170,7 @@
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
-      <showMembers />
+      <showMembers ProjectPane="false" />
       <showModules />
       <showLibraryContents ProjectPane="true" />
       <hideEmptyPackages />
@@ -189,20 +209,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DV" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -213,6 +219,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -265,13 +272,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1288" height="778" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20525059" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16233355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -349,11 +356,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/vendor/plugins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Classifiers/ClassifiersManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="1" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0" />
@@ -362,13 +364,6 @@
     <entry file="file://$PROJECT_DIR$/js/Classifiers/EqualClassifier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="1" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="25" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/PopUpManager.js">
@@ -390,18 +385,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="26" selection-start="3653" selection-end="3682" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Classifiers/DayClassifier.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="60" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="24" column="60" selection-start="668" selection-end="668" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/vendor/bootstrap.min.js">
@@ -414,13 +400,6 @@
     <entry file="file://$PROJECT_DIR$/js/DataSource.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="1" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.9411765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="14" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -439,19 +418,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="123" selection-start="2753" selection-end="2753" vertical-scroll-proportion="-6.3461537">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="12" column="23" selection-start="548" selection-end="548" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
+    <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="53" selection-start="3923" selection-end="3923" vertical-scroll-proportion="0.5068259">
+        <state line="32" column="39" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/notify.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="24" selection-start="593" selection-end="593" vertical-scroll-proportion="-9.04">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="10" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="60" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="30" selection-start="1355" selection-end="1355" vertical-scroll-proportion="0.20795107">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

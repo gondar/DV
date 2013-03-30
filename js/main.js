@@ -11,15 +11,28 @@ function Animator(){
     var isEnabled = false;
 
     function Animate(){
+        $('.sigma-parent').addClass('sigma-fullwindow');
+        $('.sigma-parent').removeClass('sigma-parent');
+        $('.sigma-fullwindow').width($(document).width());
+        $('.sigma-fullwindow').height($(document).height()-50);
+        $('#navigationBar').removeClass("navbar-fixed-top");
+        $('#navigationBar').addClass("navbar-fixed-bottom");
+        $("body").css("background-color","#222222");
         $("#partysizeEdgeSettings").trigger("click");
+        $.notify.success('In the last X minutes we had Y reservations of party size Z and Q reservations of party size F.');
         setTimeout(function(){
             $("#partysizeEdgeSettings").trigger("click");
-            $("#partnernameEdgeSettings").trigger("click");
+            $.notify.close();
             setTimeout(function(){
                 $("#partnernameEdgeSettings").trigger("click");
-                if (isEnabled)
-                    Animate();
-            },speed);
+                $.notify.success('In the last X minutes we had Y reservations from partner "Z" and Q reservations from partner "F".');
+                setTimeout(function(){
+                    $("#partnernameEdgeSettings").trigger("click");
+                    $.notify.close();
+                    if (isEnabled)
+                        Animate();
+                },speed);
+            },3000);
         },speed);
     }
 

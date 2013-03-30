@@ -94,7 +94,7 @@ function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager,
     }
 
     function AddAnimationStartStopListener(){
-        var state = 1;
+        var state = 0;
         $("#startStopAnimation").click(function () {
             if (state == 0) {
                 state = 1;

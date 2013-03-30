@@ -30,6 +30,7 @@ function SigmaAdapter(classifierManager, dataManager) {
         });
         setSize();
         sigInst.draw();
+        sigInst.position(0,0,1).draw();
     }
 
     function reDrawAll(){
