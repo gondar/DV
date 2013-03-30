@@ -1,16 +1,22 @@
-function Animator(){
+function Animator(graphState){
     var speed = 5000;
     var isEnabled = false;
 
+    function GetMessage(param){
+        var popular = graphState.GetMostPopular(param);
+
+        return "In the last "+graphState.GetTimeSpan()+" minutes we had <b>"+popular[0].Count+" reservations</b> with <b>"+param+" equal "+popular[0].Name+"</b>";
+    }
+
     function Animate(){
         $("#partysizeEdgeSettings").trigger("click");
-        $.notify.success('In the last X minutes we had Y reservations of party size Z and Q reservations of party size F.');
+        $.notify.success(GetMessage("partysize"));
         setTimeout(function(){
             $("#partysizeEdgeSettings").trigger("click");
             $.notify.close();
             setTimeout(function(){
                 $("#partnernameEdgeSettings").trigger("click");
-                $.notify.success('In the last X minutes we had Y reservations from partner "Z" and Q reservations from partner "F".');
+                $.notify.success(GetMessage("partnername"));
                 setTimeout(function(){
                     $("#partnernameEdgeSettings").trigger("click");
                     $.notify.close();

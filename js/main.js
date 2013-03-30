@@ -6,6 +6,21 @@ function setClassifiers(classifierManager) {
 //    classifierManager.SetClassifier("DateTime", new DayClassifier());
 }
 
+function GraphState(dataManager){
+    var timespan = NaN;
+    return {
+        GetTimeSpan: function(){
+            return timespan;
+        },
+        SetTimeSpan: function(newTimespan){
+            timespan = newTimespan;
+        },
+        GetMostPopular: function(property){
+            return dataManager.GetGropusSortedByCount(property);
+        }
+    }
+}
+
 $(document).ready(function(){
     var dataSource = new DataSource();
     dataSource.GetData(function(data) {
@@ -15,9 +30,10 @@ $(document).ready(function(){
         var sigmaAdapter = new SigmaAdapter(classifierManager, dataManager).Init(data, "#graph");
         new PopUpManager(sigmaAdapter, '#graph').AddPopUp();
         var forceRunner = new ForceAtlasRunner(sigmaAdapter, "#start_stop").Run();
-        var animator = new Animator();
+        var graphState = new GraphState(dataManager);
+        var animator = new Animator(graphState);
         var fullScreen = new Fullscreen();
-        var settingsView = new SettingsView(forceRunner, dataManager, sigmaAdapter,classifierManager, animator, fullScreen).PopulateSettings(data).AddListeners(sigmaAdapter);
+        var settingsView = new SettingsView(forceRunner, dataManager, sigmaAdapter,classifierManager, animator, fullScreen, graphState).PopulateSettings(data).AddListeners(sigmaAdapter);
         GetMoreData(dataSource, dataManager, function(){
             settingsView.UpdateState();
             //animator.Start();

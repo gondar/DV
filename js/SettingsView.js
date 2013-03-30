@@ -1,4 +1,4 @@
-function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager, animator, fullscreen){
+function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager, animator, fullscreen, graphState){
     function InitEdgeSettings(graph) {
         var edges = {};
         $(".edge-setting").click(function () {
@@ -83,6 +83,7 @@ function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager,
                 i++;
             }
             $("#displayedTimes").html("<div>Added "+added+" nodes which show reservations in the last "+(i)+ " minutes</div>");
+            graphState.SetTimeSpan(i);
             dataManager.SetMaxNodesAllowed(max);
             sigmaAdapter.UpdateNodes();
             setTimeout(function () {
