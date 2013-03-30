@@ -33,14 +33,12 @@
 .sigma-parent {
     background: none repeat scroll 0 0 #222222;
     border-radius: 4px 4px 4px 4px;
-    height: 600px;
+    height: 300px;
     position: relative;
 }
 
 .sigma-fullwindow {
     background: none repeat scroll 0 0 #222222;
-    border-radius: 4px 4px 4px 4px;
-    height: 600px;
     position: absolute;
     z-index: 90;
     left: 0;

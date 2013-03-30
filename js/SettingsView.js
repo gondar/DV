@@ -1,4 +1,4 @@
-function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager, animator){
+function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager, animator, fullscreen){
     function InitEdgeSettings(graph) {
         var edges = {};
         $(".edge-setting").click(function () {
@@ -112,6 +112,21 @@ function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager,
         });
     }
 
+    function AddFullScreenListener(){
+        var state = 0;
+        $("#fullScreen").click(function () {
+            if (state == 0) {
+                state = 1;
+                $(this).attr("value", "Window mode");
+                fullscreen.On();
+            } else {
+                state = 0;
+                $(this).attr("value", "Fullscreen");
+                fullscreen.Off();
+            }
+        });
+    }
+
     return {
         PopulateSettings: function(data){
             var reservation = data.reservations[0];
@@ -125,6 +140,7 @@ function SettingsView(forceRunner, dataManager, sigmaAdapter, classifierManager,
             InitColorSettings(graph);
             AddListenerToMaxNodesCount();
             AddAnimationStartStopListener();
+            AddFullScreenListener();
             return this;
         },
         UpdateState: function(){

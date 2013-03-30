@@ -38,14 +38,20 @@
                             <li><a href="#about">About</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
+                        <form class="navbar-form pull-right">
+                            <div class="btn-group">
+                                <input class="btn btn-success" type="button" id="startStopAnimation" value="Start Animation"/>
+                                <input class="btn btn-primary" type="button" id="fullScreen" value="Fullscreen"/>
+                            </div>
+                        </form>
                     </div><!--/.nav-collapse -->
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <h1>Reservations Force Field</h1>
-            <input class="btn btn-large btn-block btn-success" type="button" id="startStopAnimation" value="Start Animation"/>
+           <!-- <h1>Reservations Force Field</h1>-->
+
             <div class="row">
                 <div class="span12">
                     <div class="sigma-parent">
@@ -114,6 +120,8 @@
         <script src="js/Classifiers/ApproximateClassifier.js"></script>
         <script src="js/Classifiers/EqualClassifier.js"></script>
         <script src="js/Classifiers/DayClassifier.js"></script>
+        <script src="js/Animator.js"></script>
+        <script src="js/Fullscreen.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
