@@ -19,6 +19,7 @@
     <file path="/DataManager.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364669277448" ignored="false" />
     <file path="/notify.css" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364651587201" ignored="false" />
     <file path="/Animator.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364669096183" ignored="false" />
+    <file path="/Fullscreen.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364983035865" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,18 +42,16 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="8" selection-start="6645" selection-end="6645" vertical-scroll-proportion="-21.884615">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="127" column="0" selection-start="6796" selection-end="6796" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="53" selection-start="762" selection-end="762" vertical-scroll-proportion="0.45">
+            <state line="3" column="53" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -67,10 +66,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Animator.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/Animator.js">
+      <file leaf-file-name="Fullscreen.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/Fullscreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="160" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
+            <state line="57" column="30" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.8070375">
               <folding />
             </state>
           </provider>
@@ -79,7 +78,7 @@
       <file leaf-file-name="DataManager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/DataManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="36" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0">
+            <state line="55" column="36" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,7 +87,7 @@
       <file leaf-file-name="SigmaAdapter.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="39" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
+            <state line="34" column="39" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,20 +113,20 @@
         <option value="$PROJECT_DIR$/js/SigmaAdapter.js" />
         <option value="$PROJECT_DIR$/css/notify.css" />
         <option value="$PROJECT_DIR$/css/main.css" />
-        <option value="$PROJECT_DIR$/js/Fullscreen.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/SettingsView.js" />
         <option value="$PROJECT_DIR$/js/Animator.js" />
         <option value="$PROJECT_DIR$/js/DataManager.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/Fullscreen.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -155,7 +154,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -190,6 +188,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,13 +246,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16233355" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16183448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -331,11 +330,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/PopUpManager.js">
+    <entry file="file://$PROJECT_DIR$/js/DataManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="87" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0">
+        <state line="24" column="36" selection-start="916" selection-end="916" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="39" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/PopUpManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="87" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service.rb">
@@ -345,9 +356,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Classifiers/ApproximateClassifier.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="1" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="22" column="1" selection-start="618" selection-end="618" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Classifiers/DayClassifier.js">
@@ -364,23 +373,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/DataSource.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="1" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.9411765">
-          <folding />
-        </state>
+        <state line="42" column="1" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.9411765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/ForceAtlasRunner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="41" selection-start="656" selection-end="663" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/notify.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="24" selection-start="593" selection-end="593" vertical-scroll-proportion="-9.04">
-          <folding />
-        </state>
+        <state line="21" column="41" selection-start="656" selection-end="663" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
@@ -390,25 +388,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Fullscreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="8" selection-start="6645" selection-end="6645" vertical-scroll-proportion="-21.884615">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="127" column="0" selection-start="6796" selection-end="6796" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/SigmaAdapter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="39" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
+        <state line="34" column="39" selection-start="1287" selection-end="1287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/DataManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="36" selection-start="1854" selection-end="1854" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="53" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -420,23 +423,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Animator.js">
+    <entry file="file://$PROJECT_DIR$/js/Fullscreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="160" selection-start="330" selection-end="330" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/DataManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="53" selection-start="762" selection-end="762" vertical-scroll-proportion="0.45">
+        <state line="57" column="30" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.8070375">
           <folding />
         </state>
       </provider>
