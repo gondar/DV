@@ -5,8 +5,8 @@
     <ignored path="DV.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/main.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1365009348548" ignored="false" />
-    <file path="/index.html" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1365006241216" ignored="false" />
-    <file path="/DataSource.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1365009595110" ignored="false" />
+    <file path="/index.html" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1365010257580" ignored="false" />
+    <file path="/DataSource.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1365009981217" ignored="false" />
     <file path="/PopUp.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363290306308" ignored="false" />
     <file path="/*.regexp" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1363290598951" ignored="false" />
     <file path="/fragment.js2" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1365008070056" ignored="false" />
@@ -41,10 +41,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DataSource.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DataSource.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/DataSource.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="123" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.38659793">
+            <state line="17" column="22" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="195" selection-start="5159" selection-end="5159" vertical-scroll-proportion="0.8453039">
               <folding />
             </state>
           </provider>
@@ -80,7 +89,7 @@
       <file leaf-file-name="SettingsView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="45" selection-start="4241" selection-end="4241" vertical-scroll-proportion="0.0">
+            <state line="52" column="143" selection-start="1886" selection-end="1919" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,10 +135,10 @@
         <option value="$PROJECT_DIR$/js/SigmaAdapter.js" />
         <option value="$PROJECT_DIR$/js/SettingsView.js" />
         <option value="$PROJECT_DIR$/js/ForceAtlasRunner.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/Animator.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/DataSource.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -436,23 +445,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="45" selection-start="4241" selection-end="4241" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ForceAtlasRunner.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="37" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="32" selection-start="1999" selection-end="1999" vertical-scroll-proportion="-13.076923">
           <folding />
         </state>
       </provider>
@@ -480,7 +475,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/DataSource.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="123" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.38659793">
+        <state line="17" column="22" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/SettingsView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="143" selection-start="1886" selection-end="1919" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="195" selection-start="5159" selection-end="5159" vertical-scroll-proportion="0.8453039">
           <folding />
         </state>
       </provider>

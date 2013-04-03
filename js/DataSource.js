@@ -14,8 +14,8 @@ function DataSource(){
                 }
             });
         },
-        GetBigData: function(dataRequested,dataManager, executeWhenFoundData,executeWhenFinished, previous){
-            var url = previous || head;
+        GetBigData: function(dataRequested,dataManager, executeWhenFoundData,executeWhenFinished){
+            var url = $("#feedUrl").val();
             var self = this;
             $.getJSON(proxy+url,function(data){
                     if (last !== data.href_self) {
