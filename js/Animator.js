@@ -48,20 +48,32 @@ function Animation(param, shouldContinueFunction, graphState, speed){
 
         return "In the last "+graphState.GetTimeSpan()+" minutes we had <b>"+popular[setId].Count+" reservations</b> with <b>"+param+" equal "+popular[setId].Name+"</b>";
     }
+    function startAnimation(after){
+        $("#"+param+"EdgeSettings").trigger("click");
+        $.notify.success(GetMessage(param,0));
+        setTimeout(function(){
+            after();
+        },speed);
+    }
+
+    function finishAnimation(){
+        $("#"+param+"EdgeSettings").trigger("click");
+        $.notify.close();
+        scheduleNextAnimation();
+    }
+
+    function scheduleNextAnimation()
+    {
+        setTimeout(function(){
+            if (next != null && next != undefined && shouldContinueFunction()){
+                next.Start();
+            }
+        },speed);
+    }
 
     return {
         Start: function(){
-            $("#"+param+"EdgeSettings").trigger("click");
-            $.notify.success(GetMessage(param,0));
-            setTimeout(function(){
-                $("#"+param+"EdgeSettings").trigger("click");
-                $.notify.close();
-                    setTimeout(function(){
-                        if (next != null && next != undefined && shouldContinueFunction()){
-                            next.Start();
-                        }
-                    },speed);
-            },speed);
+            startAnimation(finishAnimation);
         },
         SetNext: function(newNext){
             next = newNext;

@@ -18,7 +18,7 @@
     <file path="/DayClassifier.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364338817421" ignored="false" />
     <file path="/DataManager.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364669277448" ignored="false" />
     <file path="/notify.css" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364985352068" ignored="false" />
-    <file path="/Animator.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364987998086" ignored="false" />
+    <file path="/Animator.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364988812744" ignored="false" />
     <file path="/Fullscreen.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364985470705" ignored="false" />
     <file path="/notify.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364985343163" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -99,7 +99,7 @@
       <file leaf-file-name="Animator.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Animator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="8" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.7139614">
+            <state line="75" column="42" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.8263337">
               <folding />
             </state>
           </provider>
@@ -497,7 +497,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Animator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="8" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.7139614">
+        <state line="75" column="42" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.8263337">
           <folding />
         </state>
       </provider>
