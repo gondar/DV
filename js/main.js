@@ -31,7 +31,7 @@ $(document).ready(function(){
         new PopUpManager(sigmaAdapter, '#graph').AddPopUp();
         var forceRunner = new ForceAtlasRunner(sigmaAdapter, "#start_stop").Run();
         var graphState = new GraphState(dataManager);
-        var animator = new Animator(graphState);
+        var animator = new Animator(graphState, sigmaAdapter);
         var fullScreen = new Fullscreen();
         var settingsView = new SettingsView(forceRunner, dataManager, sigmaAdapter,classifierManager, animator, fullScreen, graphState).PopulateSettings(data).AddListeners(sigmaAdapter);
         GetMoreData(dataSource, dataManager, function(){

@@ -103,6 +103,28 @@ function SigmaAdapter(classifierManager, dataManager) {
         sigInst.draw();
     }
 
+    function colourGroup(property, key, colorId){
+        if (colorId == undefined)
+            colorId = 0;
+        var color = IntToColor(colorId);
+        var classifier = classifierManager.GetClassifier(property);
+        sigInst.iterNodes(function (node) {
+            var propertyValue = classifier.GetKey(node.attr.reservation[property]);
+            if (propertyValue == key){
+                node.color = color;
+            }
+        });
+        sigInst.draw();
+        return color;
+    }
+
+    function clearColor(){
+        sigInst.iterNodes(function (node) {
+            node.color = "#ffffff";
+        });
+        sigInst.draw();
+    }
+
     function IntToColor(id){
         var colorId = id % Colors.length;
         return "#"+Colors[colorId];
@@ -117,6 +139,8 @@ function SigmaAdapter(classifierManager, dataManager) {
         UpdateNodes: updateNodes,
         AddEdges: addEdges,
         BindPropertToColor: bindPropertyToColor,
+        ColourGroup: colourGroup,
+        ClearColor: clearColor,
         RedrawAll: reDrawAll
 
     }

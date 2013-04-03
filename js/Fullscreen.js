@@ -36,10 +36,11 @@ function Fullscreen(){
             $('.sigma-parent').addClass('sigma-fullwindow');
             $('.sigma-parent').removeClass('sigma-parent');
             $('.sigma-fullwindow').width($(document).width());
-            $('.sigma-fullwindow').height($(document).height()-50);
+            $('.sigma-fullwindow').height($(document).height()-100);
             $('#navigationBar').removeClass("navbar-fixed-top");
             $('#navigationBar').addClass("navbar-fixed-bottom");
             $('#notify').addClass("notify-fullscreen");
+            $("#settings").css("display","none");
             $.notify.setFullScreen(true);
             $("body").css("background-color","#222222");
             requestFullScreen(document.body);
@@ -58,6 +59,7 @@ function Fullscreen(){
             $('#navigationBar').removeClass("navbar-fixed-bottom");
             $("body").css("background-color","#ffffff");
             $('#notify').removeClass("notify-fullscreen");
+            $("#settings").css("display","");
             $.notify.setFullScreen(false);
             closeFullScreen();
         }

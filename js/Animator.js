@@ -1,13 +1,14 @@
-function Animator(graphState){
+function Animator(graphState, sigmaAdapter){
     var speed = 5000;
     var isEnabled = false;
 
     function BuildAnimation(param){
-        return new Animation(param,function(){return isEnabled;}, graphState, speed);
+        return new Animation(param,function(){return isEnabled;}, graphState, sigmaAdapter, speed);
     }
 
     function BuildAnimationFlow(){
-        var flow = ["partnername","partysize","shiftdatetime","billingtype","restaurantname"];
+        //var flow = ["partnername","partysize","shiftdatetime","billingtype","restaurantname"];
+        var flow = ["billingtype","restaurantname"];
         var animations = [];
         for (var paramId in flow){
             var param = flow[paramId];
@@ -36,39 +37,46 @@ function Animator(graphState){
     }
 }
 
-function Animation(param, shouldContinueFunction, graphState, speed){
+function Animation(param, shouldContinueFunction, graphState, sigmaAdapter, speed){
     var next = null;
 
-    function GetMessage(param,setId){
+    function EmphasizeGroup(param,setId){
         var popular = graphState.GetMostPopular(param);
+        if (popular[setId] == undefined)
+            return;
 
-        return "In the last "+graphState.GetTimeSpan()+" minutes we had <b>"+popular[setId].Count+" reservations</b> with <b>"+param+" equal "+popular[setId].Name+"</b>";
+        var color = sigmaAdapter.ColourGroup(param, popular[setId].Name, setId);
+
+
+        var msg = "In the last "+graphState.GetTimeSpan()+" minutes we had <b>"+popular[setId].Count+" reservations</b> with <b>"+param+" equal "+popular[setId].Name+"</b>";
+
+        $.notify.custom(msg,undefined, setId);
     }
 
     function startAnimation(after){
         $("#"+param+"EdgeSettings").trigger("click");
-        $.notify.success(GetMessage(param,0));
+        EmphasizeGroup(param,0);
         setTimeout(after,speed);
     }
 
     function showMessage(groupId, after){
-        $.notify.success(GetMessage(param,groupId));
+        EmphasizeGroup(param,groupId);
         setTimeout(after, speed);
     }
 
     function finishAnimation(after){
         $("#"+param+"EdgeSettings").trigger("click");
         $.notify.close();
+        sigmaAdapter.RedrawAll();
+        sigmaAdapter.ClearColor();
         setTimeout(after, speed);
     }
 
     function scheduleNextAnimation()
     {
-        setTimeout(function(){
-            if (next != null && next != undefined && shouldContinueFunction()){
-                next.Start();
-            }
-        },speed);
+        if (next != null && next != undefined && shouldContinueFunction()){
+            next.Start();
+        }
     }
 
     return {

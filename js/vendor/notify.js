@@ -132,6 +132,9 @@ $.support.transition = (function(){
             basic : function(txt, options){
                 handle('basic', txt, options);
             },
+            custom: function(txt,options,className){
+                handle(className, txt, options);
+            },
             //Only command that really does something differntly
             close : function(){
                 hide(ele);
