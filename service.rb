@@ -2,14 +2,18 @@ require 'rubygems'
 require 'sinatra'
 require 'json'
 
+require 'net/http'
+
 set :public_folder, '.'
 
-get "/:start/:stop" do
-	d = File.read('AllData.json')
-	json = JSON.parse(d)
-	start = params[:start].to_i
-	stop = params[:stop].to_i
-	content_type :json
-	return json[start..stop].to_json
+get "/proxy/" do
+	url = params[:url]
+    return "Access Denied" if !(url.include? ".otcorp.opentable")
+
+	content_type 'application/json'
+
+    uri = URI(url)
+    puts url
+    return Net::HTTP.get(uri)
 end
 

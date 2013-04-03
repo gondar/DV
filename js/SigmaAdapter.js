@@ -29,7 +29,6 @@ function SigmaAdapter(classifierManager, dataManager) {
             });
         });
         setSize();
-        sigInst.draw();
         sigInst.position(0,0,1).draw();
     }
 
@@ -60,12 +59,14 @@ function SigmaAdapter(classifierManager, dataManager) {
         sigInst.draw();
     }
 
-    function updateNodes() {
-        sigInst.emptyGraph();
-        nodesCounter=0;
-        addNodes(dataManager.GetData());
-        addEdges();
-        }
+    function updateNodes(forceRunner) {
+        forceRunner.WhileForceStop(function(){
+            sigInst.emptyGraph();
+            nodesCounter=0;
+            addNodes(dataManager.GetData());
+            addEdges();
+        });
+    }
 
     function initSigma(data, selector) {
         var sigRoot = $(selector).get(0);
@@ -81,7 +82,6 @@ function SigmaAdapter(classifierManager, dataManager) {
             if (node.size > max)
                 node.size = max;
         });
-        sigInst.draw();
     }
 
     function bindPropertyToColor(property){
@@ -142,7 +142,6 @@ function SigmaAdapter(classifierManager, dataManager) {
         ColourGroup: colourGroup,
         ClearColor: clearColor,
         RedrawAll: reDrawAll
-
     }
 }
 

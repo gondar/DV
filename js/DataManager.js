@@ -1,7 +1,7 @@
 function DataManager(classifierManager){
     var nodes = [];
     var filters = {};
-    var maxNodesAllowed = 40;
+    //var maxNodesAllowed = 300;
 
     function SortByName(a, b){
         var aName = a.Name.toLowerCase();
@@ -15,10 +15,10 @@ function DataManager(classifierManager){
         return ((aCount < bCount) ? -1 : ((aCount > bCount) ? 1 : 0));
     }
 
-    function Group(property){
+    function Group(property, list){
         groups = {}
-        for (var reservationId in nodes) {
-            var reservation = nodes[reservationId];
+        for (var reservationId in list) {
+            var reservation = list[reservationId];
             var classifier = classifierManager.GetClassifier(property);
             var key = classifier.GetKey(reservation[property]);
             if (!groups.hasOwnProperty(key)) {
@@ -42,18 +42,21 @@ function DataManager(classifierManager){
             }
             return this;
         },
-        GetData: function(data) {
+        RemoveData: function(){
+            nodes = [];
+        },
+        GetData: function() {
             return nodes.filter(function(node){
                 for (var property in filters) {
                     var key = classifierManager.GetClassifier(property).GetKey(node[property]);
-                    if ($.inArray(key.toString(), filters[property]) == -1) {
-                        return false;
+                    if ($.inArray(key.toString(), filters[property]) != -1) {
+                        return true;
                     }
                 }
-                return true;
-            }).slice(0,maxNodesAllowed);
+                return false;
+            });//.slice(0,maxNodesAllowed);
         },
-        GetAllData: function(data) {
+        GetAllData: function() {
             return nodes;
         },
         AddFilter: function(property, value){
@@ -69,14 +72,17 @@ function DataManager(classifierManager){
                     delete filters[property];
             }
         },
+        RemoveFilters: function(){
+            filters = {};
+        },
         SetMaxNodesAllowed: function(max) {
-            maxNodesAllowed = max;
+            //maxNodesAllowed = max;
         },
         GetGroupsSortedByName: function(property){
-            return Group(property).sort(SortByName).reverse();
+            return Group(property, nodes).sort(SortByName).reverse();
         },
-        GetGropusSortedByCount: function(property){
-            return Group(property).sort(SortByCount).reverse();                 o
+        GetFilteredGroupsSortedByCount: function(property){
+            return Group(property, this.GetData()).sort(SortByCount).reverse();
         }
     }
 }

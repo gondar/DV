@@ -1,9 +1,11 @@
 function ForceAtlasRunner(sigmaAdapter, selector){
     var isRunning = false;
+    var isScheduled = false;
+    var isForceStop = false;
     sigInst = sigmaAdapter.Sigma;
 
     function startForceAtlas() {
-        if (isRunning)
+        if (isRunning || isForceStop)
             return;
         sigInst.startForceAtlas2();
         isRunning = true;
@@ -13,6 +15,7 @@ function ForceAtlasRunner(sigmaAdapter, selector){
     }
 
     function stopForceAtlas() {
+        isScheduled = false;
         if (!isRunning)
             return;
         sigInst.stopForceAtlas2();
@@ -34,6 +37,26 @@ function ForceAtlasRunner(sigmaAdapter, selector){
             startForceAtlas();
             return this;
         },
-        Stop: stopForceAtlas
+        Stop: stopForceAtlas,
+        ScheduleStart: function(){
+            if (isScheduled || isRunning)
+                return;
+
+            isScheduled = true;
+            setTimeout(function () {
+                if (isScheduled)
+                    startForceAtlas();
+            }, 1000);
+        },
+        WhileForceStop: function(action){
+            isForceStop = true;
+            var wasRunning = isRunning;
+            stopForceAtlas();
+            action();
+            isForceStop = false;
+            if (wasRunning) {
+                this.ScheduleStart();
+            }
+        }
     }
 }

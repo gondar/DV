@@ -1,4 +1,4 @@
-function Animator(graphState, sigmaAdapter){
+function Animator(graphState, sigmaAdapter, forceRunner){
     var speed = 5000;
     var isEnabled = false;
 
@@ -17,7 +17,7 @@ function Animator(graphState, sigmaAdapter){
                 animation.SetNext(animations[paramId-1]);
             }
         }
-        animations[0].SetNext(animations[1]);
+        animations[0].SetNext(animations[animations.length-1]);
         return animations[0];
     }
 
@@ -25,7 +25,8 @@ function Animator(graphState, sigmaAdapter){
         Start: function(){
             if (!isEnabled) {
                 isEnabled = true;
-                //Animate();
+                //sigmaAdapter.UpdateNodes(forceRunner);
+                forceRunner.ScheduleStart();
                 BuildAnimationFlow().Start();
             }
         },
@@ -52,23 +53,35 @@ function Animation(param, shouldContinueFunction, graphState, sigmaAdapter, spee
         $.notify.custom(msg,undefined, setId);
     }
 
+    function scheduleNext(after){
+        if (after == undefined)
+            return;
+        if (shouldContinueFunction()){
+            setTimeout(after,speed);
+        } else {
+            finishAnimation();
+        }
+
+    }
+
     function startAnimation(after){
         $("#"+param+"EdgeSettings").trigger("click");
         EmphasizeGroup(param,0);
-        setTimeout(after,speed);
+        scheduleNext(after);
     }
 
     function showMessage(groupId, after){
         EmphasizeGroup(param,groupId);
-        setTimeout(after, speed);
+        scheduleNext(after);
     }
 
     function finishAnimation(after){
         $("#"+param+"EdgeSettings").trigger("click");
         $.notify.close();
-        sigmaAdapter.RedrawAll();
         sigmaAdapter.ClearColor();
-        setTimeout(after, speed);
+        if (after != undefined) {
+            after();
+        }
     }
 
     function scheduleNextAnimation()

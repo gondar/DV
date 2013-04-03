@@ -1,44 +1,27 @@
 function DataSource(){
-    var head = "http://localhost:4567/reservations/created";
-    var prev = head;
-    var downloaded = [];
-
-    function GetMoreData(executeWhenFinished, url){
-        if (url == undefined || url == null || url == "") {
-            url = head;
-        }
-        $.getJSON(url,function(data){
-            if ($.inArray(data.href_self, downloaded) != -1){
-                GetMoreData(executeWhenFinished,data.href_prev);
-                return;
-            }
-            downloaded.push(data.href_self);
-            executeWhenFinished(data);
-        });
-    };
+    var proxy = "http://localhost:4567/proxy/?url=";
+    var head = "http://feeds-na.otcorp.opentable.com/reservations/created/";
+    var last = "";
 
     return {
         GetData: function(executeWhenFinished){
-            $.getJSON(head,function(data){
-                downloaded.push(data.href_self);
-                executeWhenFinished(data);
+            $.getJSON(proxy+head,function(data){
+                if (last !== data.href_self) {
+                    last = data.href_self;
+                    console.log(data.href_self);
+                    executeWhenFinished(data);
+                }
             });
-        },
-
-        GetMoreData: GetMoreData
+        }
     }
 }
 
 var count = 0
-function GetMoreData(dataSource, dataManager, actionToExecute) {
-    dataSource.GetMoreData(function (data) {
+function GetCurrentData(dataSource, dataManager, settingsView) {
+    dataSource.GetData(function (data) {
+        dataManager.RemoveData();
         dataManager.AddData(data);
-        if (count++ <4) {
-            GetMoreData(dataSource, dataManager, actionToExecute);
-        } else {
-            actionToExecute();
-        }
-
+        settingsView.UpdateState();
     });
 }
 
