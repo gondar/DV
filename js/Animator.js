@@ -2,10 +2,6 @@ function Animator(graphState){
     var speed = 5000;
     var isEnabled = false;
 
-    function ShouldContinue(){
-        return isEnabled;
-    }
-
     function BuildAnimation(param){
         return new Animation(param,function(){return isEnabled;}, graphState, speed);
     }
@@ -48,18 +44,22 @@ function Animation(param, shouldContinueFunction, graphState, speed){
 
         return "In the last "+graphState.GetTimeSpan()+" minutes we had <b>"+popular[setId].Count+" reservations</b> with <b>"+param+" equal "+popular[setId].Name+"</b>";
     }
+
     function startAnimation(after){
         $("#"+param+"EdgeSettings").trigger("click");
         $.notify.success(GetMessage(param,0));
-        setTimeout(function(){
-            after();
-        },speed);
+        setTimeout(after,speed);
     }
 
-    function finishAnimation(){
+    function showMessage(groupId, after){
+        $.notify.success(GetMessage(param,groupId));
+        setTimeout(after, speed);
+    }
+
+    function finishAnimation(after){
         $("#"+param+"EdgeSettings").trigger("click");
         $.notify.close();
-        scheduleNextAnimation();
+        setTimeout(after, speed);
     }
 
     function scheduleNextAnimation()
@@ -73,7 +73,15 @@ function Animation(param, shouldContinueFunction, graphState, speed){
 
     return {
         Start: function(){
-            startAnimation(finishAnimation);
+            startAnimation(function(){
+                showMessage(1,function(){
+                    showMessage(2,function(){
+                        finishAnimation(function(){
+                            scheduleNextAnimation();
+                        });
+                    });
+                });
+            });
         },
         SetNext: function(newNext){
             next = newNext;
