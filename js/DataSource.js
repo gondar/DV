@@ -1,5 +1,5 @@
 function DataSource(){
-    var proxy = "http://localhost:4567/proxy/?url=";
+    var proxy = "http://192.168.7.111:4567/proxy/?url=";
     //var head = "http://feeds-na.otcorp.opentable.com/reservations/created/";
     var head = "http://feeds-eu.otcorp.opentable.com/reservations/created/";
     var last = "";
