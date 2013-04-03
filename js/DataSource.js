@@ -1,6 +1,7 @@
 function DataSource(){
     var proxy = "http://localhost:4567/proxy/?url=";
-    var head = "http://feeds-na.otcorp.opentable.com/reservations/created/";
+    //var head = "http://feeds-na.otcorp.opentable.com/reservations/created/";
+    var head = "http://feeds-eu.otcorp.opentable.com/reservations/created/";
     var last = "";
 
     return {
@@ -17,11 +18,23 @@ function DataSource(){
 }
 
 var count = 0
-function GetCurrentData(dataSource, dataManager, settingsView) {
+function GetCurrentData(dataSource, dataManager, settingsView, animator) {
     dataSource.GetData(function (data) {
-        dataManager.RemoveData();
-        dataManager.AddData(data);
-        settingsView.UpdateState();
+        var wasEnabled = animator.IsEnabled();
+        animator.Stop();
+        setTimeout(function(){
+            animator.NewData();
+            dataManager.RemoveData();
+            dataManager.AddData(data);
+            settingsView.UpdateState();
+            console.log("Enabled "+wasEnabled);
+            if (wasEnabled) {
+                setTimeout(function(){
+                    animator.Start();
+                },5000);
+            }
+        }, 1000)
+
     });
 }
 

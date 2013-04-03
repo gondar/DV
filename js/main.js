@@ -34,9 +34,9 @@ $(document).ready(function(){
         var animator = new Animator(graphState, sigmaAdapter, forceRunner);
         var fullScreen = new Fullscreen();
         var settingsView = new SettingsView(forceRunner, dataManager, sigmaAdapter,classifierManager, animator, fullScreen, graphState).PopulateSettings(data).AddListeners(sigmaAdapter);
-//        setInterval( function(){
-//            GetCurrentData(dataSource, dataManager, settingsView);
-//        }, 5000);
+        setInterval( function(){
+            GetCurrentData(dataSource, dataManager, settingsView, animator);
+        }, 20000);
 
     });
 })

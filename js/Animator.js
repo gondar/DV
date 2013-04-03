@@ -32,6 +32,12 @@ function Animator(graphState, sigmaAdapter, forceRunner){
         },
         Stop: function(){
             isEnabled = false;
+        },
+        NewData: function(){
+            $.notify.success("New Reservations coming...");
+        },
+        IsEnabled: function(){
+            return isEnabled;
         }
 
     }
