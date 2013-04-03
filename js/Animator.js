@@ -7,8 +7,7 @@ function Animator(graphState, sigmaAdapter){
     }
 
     function BuildAnimationFlow(){
-        //var flow = ["partnername","partysize","shiftdatetime","billingtype","restaurantname"];
-        var flow = ["billingtype","restaurantname"];
+        var flow = ["partnername","partysize","shiftdatetime","billingtype","restaurantname"];
         var animations = [];
         for (var paramId in flow){
             var param = flow[paramId];
@@ -18,7 +17,7 @@ function Animator(graphState, sigmaAdapter){
                 animation.SetNext(animations[paramId-1]);
             }
         }
-        animations[0].SetNext(animations[animations.length-1]);
+        animations[0].SetNext(animations[1]);
         return animations[0];
     }
 
