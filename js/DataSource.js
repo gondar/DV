@@ -13,28 +13,56 @@ function DataSource(){
                     executeWhenFinished(data);
                 }
             });
+        },
+        GetBigData: function(dataRequested,dataManager, executeWhenFoundData,executeWhenFinished, previous){
+            var url = previous || head;
+            var self = this;
+            $.getJSON(proxy+url,function(data){
+                    if (last !== data.href_self) {
+                        executeWhenFoundData();
+                        last = data.href_self;
+                        dataManager.AddData(data);
+                        if (dataManager.GetAllData().length < dataRequested) {
+                            self.GetMoreData(dataRequested,dataManager, executeWhenFinished, data.href_prev);
+                        } else {
+                            executeWhenFinished(data);
+                        }
+                    }
+            });
+        },
+        GetMoreData: function(dataRequested,dataManager,executeWhenFinished, previous)
+        {
+            var self = this;
+            $.getJSON(proxy+previous,function(data){
+                dataManager.AddData(data);
+                if (dataManager.GetAllData().length < dataRequested) {
+                    self.GetMoreData(dataRequested,dataManager, executeWhenFinished, data.href_prev);
+                } else {
+                    executeWhenFinished(data);
+                }
+            });
         }
     }
 }
 
 var count = 0
-function GetCurrentData(dataSource, dataManager, settingsView, animator) {
-    dataSource.GetData(function (data) {
-        var wasEnabled = animator.IsEnabled();
-        animator.Stop();
-        setTimeout(function(){
-            animator.NewData();
-            dataManager.RemoveData();
-            dataManager.AddData(data);
-            settingsView.UpdateState();
-            console.log("Enabled "+wasEnabled);
-            if (wasEnabled) {
-                setTimeout(function(){
-                    animator.Start();
-                },5000);
-            }
-        }, 1000)
+function RunAll(settingsView, wasEnabled, animator) {
 
+}
+function GetCurrentData(dataSource, dataManager, settingsView, animator) {
+    var wasEnabled = false;
+    dataSource.GetBigData(100,dataManager, function(){
+        wasEnabled = animator.IsEnabled();
+        animator.Stop();
+        animator.NewData();
+        dataManager.RemoveData();
+    }, function (data) {
+        settingsView.UpdateState();
+        if (wasEnabled) {
+            setTimeout(function () {
+                animator.Start();
+            }, 5000);
+        }
     });
 }
 
