@@ -22,6 +22,7 @@ function GraphState(dataManager){
 }
 
 $(document).ready(function(){
+    $.notify.success("Message to be noted on my dashboard!");
     var dataSource = new DataSource();
     dataSource.GetData(function(data) {
         var classifierManager = new ClassifiersManager(new EqualClassifier());

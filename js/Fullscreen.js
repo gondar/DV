@@ -39,6 +39,8 @@ function Fullscreen(){
             $('.sigma-fullwindow').height($(document).height()-50);
             $('#navigationBar').removeClass("navbar-fixed-top");
             $('#navigationBar').addClass("navbar-fixed-bottom");
+            $('#notify').addClass("notify-fullscreen");
+            $.notify.setFullScreen(true);
             $("body").css("background-color","#222222");
             requestFullScreen(document.body);
         },
@@ -55,6 +57,8 @@ function Fullscreen(){
             $('#navigationBar').addClass("navbar-fixed-top");
             $('#navigationBar').removeClass("navbar-fixed-bottom");
             $("body").css("background-color","#ffffff");
+            $('#notify').removeClass("notify-fullscreen");
+            $.notify.setFullScreen(false);
             closeFullScreen();
         }
 

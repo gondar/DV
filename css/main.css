@@ -154,3 +154,8 @@
 .clearfix {
     *zoom: 1;
 }
+
+
+.navbar-inner {
+    z-index: 99999;
+}

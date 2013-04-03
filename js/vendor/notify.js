@@ -31,18 +31,18 @@ $.support.transition = (function(){
     
     
     
-    var ele, space, timer,
+    var fullscreen, ele, space, timer,
             modTest = $.support.transition,
             //Show animation + classes toggle/reset
             show = (modTest) ?
                     function(element, extClass , txt){
                             element
-                                .attr('class', 'notify-' + extClass + ' notify-visible')
+                                .attr('class', 'notify-' + extClass + ' notify-visible '+fullscreen)
                                 .html(txt);
                     } :
                     function(element, extClass , txt){      
                             element
-                                .attr('class', 'notify-' + extClass + ' notify-visible')
+                                .attr('class', 'notify-' + extClass + ' notify-visible '+fullscreen)
                                 .html(txt)
                                 .animate({height: '30px'},400);
                     },
@@ -136,6 +136,14 @@ $.support.transition = (function(){
             close : function(){
                 hide(ele);
                 hide(space);
+            },
+            setFullScreen: function(state){
+                if (state)
+                {
+                    fullscreen = "notify-fullscreen"
+                    return;
+                }
+                fullscreen = "";
             }
             //TODO: Add setting function to change defaults
         }
