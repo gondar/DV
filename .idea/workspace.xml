@@ -18,7 +18,7 @@
     <file path="/DayClassifier.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364338817421" ignored="false" />
     <file path="/DataManager.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364669277448" ignored="false" />
     <file path="/notify.css" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364985352068" ignored="false" />
-    <file path="/Animator.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364669096183" ignored="false" />
+    <file path="/Animator.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364987998086" ignored="false" />
     <file path="/Fullscreen.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364985470705" ignored="false" />
     <file path="/notify.js" changelist="8e7bb02b-c16a-4fc1-9110-144514fb7bd5" time="1364985343163" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,7 +52,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="58" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
+            <state line="23" column="29" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -67,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fullscreen.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Fullscreen.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Fullscreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="55" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.4982974">
+            <state line="41" column="55" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -96,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Animator.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Animator.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Animator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="8" selection-start="426" selection-end="468" vertical-scroll-proportion="0.0">
+            <state line="37" column="8" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.7139614">
               <folding />
             </state>
           </provider>
@@ -143,12 +143,12 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/SettingsView.js" />
         <option value="$PROJECT_DIR$/js/DataManager.js" />
-        <option value="$PROJECT_DIR$/js/Animator.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/vendor/notify.js" />
         <option value="$PROJECT_DIR$/css/notify.css" />
         <option value="$PROJECT_DIR$/js/Fullscreen.js" />
+        <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/Animator.js" />
       </list>
     </option>
   </component>
@@ -458,20 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Animator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="8" selection-start="426" selection-end="468" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="58" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/notify.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="18" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
@@ -497,7 +483,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Fullscreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="55" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.4982974">
+        <state line="41" column="55" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="29" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Animator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="8" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.7139614">
           <folding />
         </state>
       </provider>

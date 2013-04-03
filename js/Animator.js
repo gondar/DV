@@ -2,41 +2,69 @@ function Animator(graphState){
     var speed = 5000;
     var isEnabled = false;
 
-    function GetMessage(param){
-        var popular = graphState.GetMostPopular(param);
-
-        return "In the last "+graphState.GetTimeSpan()+" minutes we had <b>"+popular[0].Count+" reservations</b> with <b>"+param+" equal "+popular[0].Name+"</b>";
+    function ShouldContinue(){
+        return isEnabled;
     }
 
-    function Animate(){
-        $("#partysizeEdgeSettings").trigger("click");
-        $.notify.success(GetMessage("partysize"));
-        setTimeout(function(){
-            $("#partysizeEdgeSettings").trigger("click");
-            $.notify.close();
-            setTimeout(function(){
-                $("#partnernameEdgeSettings").trigger("click");
-                $.notify.success(GetMessage("partnername"));
-                setTimeout(function(){
-                    $("#partnernameEdgeSettings").trigger("click");
-                    $.notify.close();
-                    if (isEnabled)
-                        Animate();
-                },speed);
-            },3000);
-        },speed);
+    function BuildAnimation(param){
+        return new Animation(param,function(){return isEnabled;}, graphState, speed);
+    }
+
+    function BuildAnimationFlow(){
+        var flow = ["partnername","partysize","shiftdatetime","billingtype","restaurantname"];
+        var animations = [];
+        for (var paramId in flow){
+            var param = flow[paramId];
+            var animation = BuildAnimation(param);
+            animations.push(animation);
+            if (paramId > 0){
+                animation.SetNext(animations[paramId-1]);
+            }
+        }
+        animations[0].SetNext(animations[animations.length-1]);
+        return animations[0];
     }
 
     return {
         Start: function(){
             if (!isEnabled) {
                 isEnabled = true;
-                Animate();
+                //Animate();
+                BuildAnimationFlow().Start();
             }
         },
         Stop: function(){
             isEnabled = false;
         }
 
+    }
+}
+
+function Animation(param, shouldContinueFunction, graphState, speed){
+    var next = null;
+
+    function GetMessage(param,setId){
+        var popular = graphState.GetMostPopular(param);
+
+        return "In the last "+graphState.GetTimeSpan()+" minutes we had <b>"+popular[setId].Count+" reservations</b> with <b>"+param+" equal "+popular[setId].Name+"</b>";
+    }
+
+    return {
+        Start: function(){
+            $("#"+param+"EdgeSettings").trigger("click");
+            $.notify.success(GetMessage(param,0));
+            setTimeout(function(){
+                $("#"+param+"EdgeSettings").trigger("click");
+                $.notify.close();
+                    setTimeout(function(){
+                        if (next != null && next != undefined && shouldContinueFunction()){
+                            next.Start();
+                        }
+                    },speed);
+            },speed);
+        },
+        SetNext: function(newNext){
+            next = newNext;
+        }
     }
 }
